@@ -1,0 +1,111 @@
+A country of 9.9 million people, with no significant natural resources, surrounded by conflict zones — and yet it has become one of the world's high-tech superpowers. Israel, dubbed "The Startup Nation," produces more startup companies per capita than any other country in the world. From military intelligence units to Google and Apple R&D centers, from traditional industries to artificial intelligence — this is a story of innovation born from necessity.
+
+export const keyStats = [
+  { value: "9,500+", label: "Active Startups", icon: "Rocket" },
+  { value: "$23.7B", label: "Capital Raised (2021 Peak)", icon: "DollarSign" },
+  { value: "400+", label: "Multinational R&D Centers", icon: "Building2" },
+  { value: "14%", label: "of GDP", icon: "TrendingUp" },
+  { value: "394K", label: "High-Tech Employees", icon: "Users" },
+  { value: "99", label: "Israeli Unicorns", icon: "Star" },
+];
+
+<StatGrid stats={keyStats} title="Israel's High-Tech in Numbers" />
+
+## The Funding Wave: From $5B to $24B
+
+The past decade has revolutionized investment levels in Israeli high-tech. From $5 billion in 2015, total funding soared to a record $23.7 billion in 2021 — a nearly fivefold increase. Even after the 2022-2023 correction, levels remained significantly above the previous decade.
+
+export const fundingData = [
+  { year: "2015", funding: 5.0 },
+  { year: "2016", funding: 5.2 },
+  { year: "2017", funding: 6.4 },
+  { year: "2018", funding: 6.8 },
+  { year: "2019", funding: 8.3 },
+  { year: "2020", funding: 10.0 },
+  { year: "2021", funding: 23.7 },
+  { year: "2022", funding: 15.5 },
+  { year: "2023", funding: 8.3 },
+  { year: "2024", funding: 10.6 },
+];
+
+<DataChart type="area" data={fundingData} xKey="year" yKeys={[{ key: "funding", label: "Funding (Billion $)", color: "#06b6d4" }]} title="Israeli High-Tech Capital Raised (Billion $)" />
+
+<InfoCard type="warning" title="The 2022-2023 Correction">
+After the 2021 bubble, the Israeli tech market underwent a sharp correction. Capital raised dropped 65% from its peak, many companies conducted layoffs, and valuations declined sharply. What began as a global correction was exacerbated in Israel by political uncertainty. However, 2024 showed clear signs of recovery, with a return to over $10 billion in funding.
+</InfoCard>
+
+## Innovation Map: Leading Sectors
+
+Israeli high-tech is not monolithic. It spans a wide range of sectors, each contributing unique innovation.
+
+export const sectorData = [
+  { sector: "Cyber", companies: 730, share: 15.2 },
+  { sector: "FinTech", companies: 680, share: 14.2 },
+  { sector: "Digital Health", companies: 570, share: 11.9 },
+  { sector: "AI/ML", companies: 520, share: 10.8 },
+  { sector: "Cloud & SaaS", companies: 480, share: 10.0 },
+  { sector: "AgriTech", companies: 260, share: 5.4 },
+  { sector: "CleanTech", companies: 230, share: 4.8 },
+  { sector: "Other", companies: 1330, share: 27.7 },
+];
+
+<DataChart type="bar" data={sectorData} xKey="sector" yKeys={[{ key: "companies", label: "Number of Companies", color: "#a855f7" }]} title="Startups by Sector" />
+
+Israel leads globally in cybersecurity, with a significant share of the world's top startups and exporters in the field. Digital health is a rapidly growing sector, with companies fundamentally transforming medicine.
+
+## Timeline: From the Golden Age to Today
+
+export const timelineEvents = [
+  { date: "1993", title: "Yozma Program", description: "The government establishes public-private venture capital funds that attract the first foreign capital to the industry.", highlight: true },
+  { date: "1998", title: "The ICQ Wave", description: "The sale of ICQ to AOL for $407 million becomes a symbol of Israeli high-tech and sparks a new wave of entrepreneurship." },
+  { date: "2006", title: "Warren Buffett Buys Israeli", description: "Berkshire Hathaway acquires Iscar for $4 billion — Buffett's first international investment ever." },
+  { date: "2014", title: "Mobileye and Intel", description: "Intel acquires Mobileye for $15.3 billion — the largest tech deal in Israeli history.", highlight: true },
+  { date: "2021", title: "Year of the Unicorns", description: "42 Israeli companies become unicorns in a single year. Record fundraising of $23.7 billion.", highlight: true },
+  { date: "2024", title: "The AI Era", description: "Israel positions itself as a leader in artificial intelligence, with hundreds of startups and R&D centers of tech giants." },
+];
+
+<Timeline events={timelineEvents} title="Israeli High-Tech Milestones" color="#a855f7" />
+
+## International Comparison: Startups Per Capita
+
+export const comparisonColumns = [
+  { key: "israel", label: "Israel" },
+  { key: "usa", label: "USA" },
+  { key: "uk", label: "UK" },
+  { key: "germany", label: "Germany" },
+];
+
+export const comparisonRows = [
+  { label: "Startups per Capita (per 100K)", values: { israel: 96, usa: 20, uk: 15, germany: 8 }, type: "bar" },
+  { label: "R&D Spending (% GDP)", values: { israel: 5.6, usa: 3.5, uk: 2.9, germany: 3.1 }, type: "bar" },
+  { label: "Unicorns", values: { israel: 99, usa: 700, uk: 155, germany: 57 }, type: "number" },
+  { label: "Foreign R&D Centers", values: { israel: "400+", usa: "N/A", uk: "200+", germany: "150+" }, type: "text" },
+];
+
+<ComparisonTable columns={comparisonColumns} rows={comparisonRows} title="Israel vs. Tech Superpowers" highlightColumn="israel" />
+
+The standout statistic: Israel spends 5.6% of GDP on research and development — the highest figure in the world. Its startup-per-capita ratio is five times that of the United States.
+
+## What Drives the Innovation?
+
+export const driverStats = [
+  { value: "8200", label: "Intelligence Unit", icon: "Shield" },
+  { value: "9", label: "Research Universities", icon: "GraduationCap" },
+  { value: "65%", label: "Workers with Degrees", icon: "Award" },
+];
+
+<StatGrid stats={driverStats} title="Innovation Drivers" />
+
+<InfoCard type="info" title="The Military Connection: From Intelligence Units to Entrepreneurship">
+One of the most unique factors in Israeli high-tech is the connection to the military. Technology units like **8200** (signals intelligence), **Talpiot**, and **Matzov** train thousands of young people annually in advanced technologies. The social networks formed in these units become the foundation for startup creation — a unique pattern with no parallel in any other country.
+</InfoCard>
+
+<ScrollReveal>
+
+<QuoteBlock author="Shimon Peres" role="Former President of Israel">
+Israel has proven that you can export brains instead of diamonds, software instead of oranges. Our greatest asset is human imagination.
+</QuoteBlock>
+
+</ScrollReveal>
+
+From the government's Yozma program to billion-dollar unicorns, Israeli high-tech has undergone an extraordinary journey. But challenges remain: social gaps between the center and periphery, a shortage of skilled workers, and dependence on foreign markets. Future success depends on maintaining the entrepreneurial spirit while broadening the circle — so that Israeli innovation becomes everyone's legacy.

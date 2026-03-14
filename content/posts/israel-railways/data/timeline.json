@@ -1,0 +1,58 @@
+[
+  {
+    "date": "1892",
+    "title": "הרכבת הראשונה",
+    "titleEn": "The First Train",
+    "description": "קו הרכבת הראשון בארץ ישראל נפתח בין יפו לירושלים. הנסיעה ארכה כ-3.5 שעות על פני 87 ק\"מ.",
+    "descriptionEn": "The first railway line in the Land of Israel opened between Jaffa and Jerusalem. The journey took approximately 3.5 hours over 87 km.",
+    "highlight": true
+  },
+  {
+    "date": "1904",
+    "title": "רכבת עמק יזרעאל",
+    "titleEn": "Jezreel Valley Railway",
+    "description": "נפתח קו הרכבת של עמק יזרעאל, חלק מפרויקט הרכבת החיג׳אזית שחיבר את דמשק למדינה.",
+    "descriptionEn": "The Jezreel Valley Railway opened, part of the Hejaz Railway project connecting Damascus to the region.",
+    "highlight": false
+  },
+  {
+    "date": "1948",
+    "title": "הקמת רכבת ישראל",
+    "titleEn": "Israel Railways Founded",
+    "description": "עם הקמת המדינה, הוקמה רכבת ישראל כחברה ממשלתית על בסיס תשתיות המנדט הבריטי.",
+    "descriptionEn": "With the establishment of the state, Israel Railways was founded as a government company based on British Mandate infrastructure.",
+    "highlight": true
+  },
+  {
+    "date": "1977",
+    "title": "נקודת השפל",
+    "titleEn": "The Low Point",
+    "description": "שנות ה-70 סימנו את השפל של הרכבת. תשתיות מוזנחות, תדירות נמוכה, ותכניות לסגירת קווים.",
+    "descriptionEn": "The 1970s marked the railway's nadir. Neglected infrastructure, low frequency, and plans to close lines entirely.",
+    "highlight": false
+  },
+  {
+    "date": "2001",
+    "title": "תחילת המודרניזציה",
+    "titleEn": "Modernization Begins",
+    "description": "תוכנית אסטרטגית חדשה הושקה, כולל רכישת קרונות חדשים, שדרוג מסילות והקמת תחנות.",
+    "descriptionEn": "A new strategic plan was launched, including new rolling stock, track upgrades, and station construction.",
+    "highlight": true
+  },
+  {
+    "date": "2018",
+    "title": "קו המהיר לירושלים",
+    "titleEn": "Jerusalem High-Speed Line",
+    "description": "לאחר עיכובים רבים, נפתח הקו המהיר תל אביב-ירושלים. הנסיעה מתקצרת ל-28 דקות.",
+    "descriptionEn": "After numerous delays, the high-speed Tel Aviv–Jerusalem line opened. Travel time was reduced to just 28 minutes.",
+    "highlight": true
+  },
+  {
+    "date": "2024",
+    "title": "שיא של 70 מיליון",
+    "titleEn": "Record 70 Million",
+    "description": "רכבת ישראל מגיעה לשיא היסטורי של כ-70 מיליון נוסעים בשנה — כמעט שלושה מונים מאשר ב-2005.",
+    "descriptionEn": "Israel Railways reached a historic record of approximately 70 million annual passengers — nearly triple the 2005 figure.",
+    "highlight": true
+  }
+]

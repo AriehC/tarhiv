@@ -1,0 +1,22 @@
+[
+  { "year": 2005, "passengers": 25 },
+  { "year": 2006, "passengers": 27 },
+  { "year": 2007, "passengers": 30 },
+  { "year": 2008, "passengers": 32 },
+  { "year": 2009, "passengers": 33 },
+  { "year": 2010, "passengers": 35 },
+  { "year": 2011, "passengers": 37 },
+  { "year": 2012, "passengers": 40 },
+  { "year": 2013, "passengers": 42 },
+  { "year": 2014, "passengers": 44 },
+  { "year": 2015, "passengers": 48 },
+  { "year": 2016, "passengers": 52 },
+  { "year": 2017, "passengers": 56 },
+  { "year": 2018, "passengers": 60 },
+  { "year": 2019, "passengers": 65 },
+  { "year": 2020, "passengers": 25 },
+  { "year": 2021, "passengers": 35 },
+  { "year": 2022, "passengers": 53 },
+  { "year": 2023, "passengers": 62 },
+  { "year": 2024, "passengers": 70 }
+]

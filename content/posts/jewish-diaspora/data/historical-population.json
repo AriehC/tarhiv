@@ -1,0 +1,21 @@
+[
+  { "year": 1, "population": 5.0 },
+  { "year": 500, "population": 1.5 },
+  { "year": 1000, "population": 1.5 },
+  { "year": 1200, "population": 1.0 },
+  { "year": 1500, "population": 1.0 },
+  { "year": 1700, "population": 1.5 },
+  { "year": 1800, "population": 2.5 },
+  { "year": 1850, "population": 4.5 },
+  { "year": 1880, "population": 7.5 },
+  { "year": 1900, "population": 10.5 },
+  { "year": 1925, "population": 14.8 },
+  { "year": 1939, "population": 16.7 },
+  { "year": 1945, "population": 11.0 },
+  { "year": 1950, "population": 11.5 },
+  { "year": 1970, "population": 12.6 },
+  { "year": 1990, "population": 12.8 },
+  { "year": 2000, "population": 13.2 },
+  { "year": 2010, "population": 13.8 },
+  { "year": 2025, "population": 15.8 }
+]

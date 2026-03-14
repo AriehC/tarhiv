@@ -1,0 +1,109 @@
+There is no precedent in human history for the revival of the Hebrew language. Many ancient languages have died — Latin, Sumerian, Akkadian — but none of them has ever come back to life as a mother tongue. Hebrew is the exception: a language that remained for approximately 1,700 years solely a sacred tongue, read and written but not spoken in daily life — and within a single generation, it was transformed into the vibrant living language of a modern state.
+
+export const keyStats = [
+  { value: "10M+", label: "Hebrew Speakers", icon: "Users" },
+  { value: "~1,700", label: "Years of Dormancy", icon: "Moon" },
+  { value: "1881", label: "Year of Revival", icon: "Sparkles" },
+  { value: "75K+", label: "Words in Dictionary", icon: "BookOpen" },
+  { value: "22", label: "Letters in Alphabet", icon: "Type" },
+  { value: "3,000+", label: "Years of History", icon: "Clock" },
+];
+
+<StatGrid stats={keyStats} title="The Hebrew Language in Numbers" />
+
+## From Sacred Language to Street Language
+
+The most dramatic transformation in Hebrew's history occurred within a single generation. In 1881, Eliezer Ben-Yehuda arrived in the Land of Israel with a dream that seemed insane: to turn Hebrew — a language that had not been spoken in everyday life for nearly 2,000 years — into children's mother tongue. His son, Ben-Zion Ben-Yehuda (Itamar Ben-Avi), was the first child in modern times whose mother tongue was Hebrew.
+
+export const speakerData = [
+  { year: "1890", speakers: 0.5 },
+  { year: "1910", speakers: 15 },
+  { year: "1920", speakers: 35 },
+  { year: "1930", speakers: 90 },
+  { year: "1948", speakers: 500 },
+  { year: "1960", speakers: 1500 },
+  { year: "1980", speakers: 3000 },
+  { year: "2000", speakers: 5500 },
+  { year: "2010", speakers: 7000 },
+  { year: "2025", speakers: 10000 },
+];
+
+<DataChart type="area" data={speakerData} xKey="year" yKeys={[{ key: "speakers", label: "Hebrew Speakers (Thousands)", color: "#a855f7" }]} title="Growth in Hebrew Speakers (Thousands)" />
+
+<InfoCard type="info" title="Ben-Yehuda: The Family That Refused to Speak Another Language">
+Eliezer Ben-Yehuda imposed a sort of "linguistic quarantine" on his household. He refused to allow his wife and son to speak any language other than Hebrew — even when there were no Hebrew words for basic concepts like "doll," "ice cream," or "newspaper." When a word didn't exist, he invented it. He worked on an enormous dictionary — "The Complete Dictionary of Ancient and Modern Hebrew" — written throughout his entire life and completed only after his death, spanning 17 volumes.
+</InfoCard>
+
+## The Challenge: Inventing a Modern Language
+
+When Ben-Yehuda began his endeavor, Hebrew had no words for modern concepts. There was no word for "newspaper," "fashion," "ice cream," or "electricity." An entire language had to be created virtually from scratch — while preserving ancient Hebrew roots.
+
+export const wordOriginData = [
+  { source: "Biblical", words: 8000, percentage: 25 },
+  { source: "Mishnaic/Talmudic", words: 6000, percentage: 19 },
+  { source: "Renewed (Root-Based)", words: 12000, percentage: 38 },
+  { source: "Borrowed (Foreign)", words: 5500, percentage: 18 },
+];
+
+<DataChart type="bar" data={wordOriginData} xKey="source" yKeys={[{ key: "percentage", label: "Percentage of Dictionary (%)", color: "#06b6d4" }]} title="Origins of Modern Hebrew Words" />
+
+38% of the modern Hebrew dictionary consists of renewed words — new words created based on ancient Hebrew roots. This is an unprecedented rate of lexical innovation for any living language.
+
+## Timeline: From the Bible to the Smartphone
+
+export const timelineEvents = [
+  { date: "10th Century BCE", title: "Biblical Hebrew", description: "Hebrew is written for the first time. The Bible, the Song of Deborah, the Psalms — all in ancient Hebrew.", highlight: true },
+  { date: "3rd Century BCE", title: "Decline as Spoken Language", description: "Aramaic replaces Hebrew as the everyday spoken language. Hebrew remains a language of prayer, literature, and study." },
+  { date: "2nd Century CE", title: "Mishnaic Hebrew", description: "Rabbi Yehuda HaNasi writes the Mishnah — the last evidence of Hebrew as a semi-spoken language." },
+  { date: "1881", title: "Ben-Yehuda Arrives", description: "Eliezer Ben-Yehuda arrives in Jaffa and begins the Hebrew revival project. His first son grows up as the sole native Hebrew speaker.", highlight: true },
+  { date: "1913", title: "The Language War", description: "A fierce public battle in Palestine over the language of instruction at the Technion. Hebrew defeats German." },
+  { date: "1922", title: "Official Recognition", description: "The British recognize Hebrew as one of three official languages of Palestine (alongside Arabic and English).", highlight: true },
+  { date: "1948", title: "Language of the State", description: "With the establishment of the state, Hebrew becomes the official language. Hundreds of thousands of immigrants learn it in ulpan programs." },
+  { date: "2007", title: "The Digital Age", description: "Hebrew adapts to technology — Hebrew keyboards, bidirectional interfaces, and extensive digital content." },
+];
+
+<Timeline events={timelineEvents} title="A 3,000-Year Journey" color="#a855f7" />
+
+## Comparison: Revived Languages
+
+Hebrew is not the only language people have attempted to revive, but it is the only one where the revival has been fully successful.
+
+export const comparisonColumns = [
+  { key: "hebrew", label: "Hebrew" },
+  { key: "irish", label: "Irish" },
+  { key: "welsh", label: "Welsh" },
+  { key: "hawaiian", label: "Hawaiian" },
+];
+
+export const comparisonRows = [
+  { label: "Current Speakers", values: { hebrew: "10M+", irish: "~80K", welsh: "~880K", hawaiian: "~2K" }, type: "text" },
+  { label: "Mother Tongue?", values: { hebrew: "Yes", irish: "Partial", welsh: "Partial", hawaiian: "No" }, type: "text" },
+  { label: "Official Language?", values: { hebrew: "Yes", irish: "Yes", welsh: "Yes", hawaiian: "Yes" }, type: "text" },
+  { label: "Success Level", values: { hebrew: "Full", irish: "Partial", welsh: "Partial", hawaiian: "Early" }, type: "text" },
+];
+
+<ComparisonTable columns={comparisonColumns} rows={comparisonRows} title="Language Revival Attempts Worldwide" highlightColumn="hebrew" />
+
+## Hebrew Today: A Living, Kicking Language
+
+export const modernStats = [
+  { value: "5,000+", label: "New Words per Decade", icon: "Plus" },
+  { value: "30+", label: "Newspapers & News Sites", icon: "Newspaper" },
+  { value: "100+", label: "Popular Podcasts", icon: "Mic" },
+];
+
+<StatGrid stats={modernStats} title="Modern Hebrew" />
+
+<InfoCard type="info" title="Slang and Street Language: The Living Hebrew">
+Today's Hebrew is light-years away from biblical Hebrew. It has absorbed words from Arabic ("yalla," "sababa," "achla"), Russian ("chavreman," "protektzia"), English ("startup," "like"), and many other languages. Israeli slang is a vibrant, dynamic phenomenon reflecting a diverse, multicultural society. The Academy of the Hebrew Language recommends Hebrew alternatives, but the street decides for itself which words to adopt.
+</InfoCard>
+
+<ScrollReveal>
+
+<QuoteBlock author="Eliezer Ben-Yehuda" role="Reviver of the Hebrew Language">
+Everything can be done — if only one desires it. If a person wills it, he is no slave; if a people wills it, they are not subjugated.
+</QuoteBlock>
+
+</ScrollReveal>
+
+The revival of the Hebrew language is one of the most astonishing cultural achievements in human history. A language considered dead became the mother tongue of millions, a language of science, technology, literature, poetry, and love. From the Bible to TikTok, from the Psalms to WhatsApp messages — Hebrew has proven that even languages can rise from the dead.

@@ -1,0 +1,107 @@
+[
+  {
+    "name": "תל אביב - סבידור מרכז",
+    "nameEn": "Tel Aviv Savidor Central",
+    "coordinates": [32.06, 34.78],
+    "line": "Coast Line / Ayalon",
+    "dailyPassengers": 45000
+  },
+  {
+    "name": "ירושלים - יצחק נבון",
+    "nameEn": "Jerusalem Yitzhak Navon",
+    "coordinates": [31.79, 35.20],
+    "line": "High-Speed Line (A1)",
+    "dailyPassengers": 22000
+  },
+  {
+    "name": "חיפה - חוף הכרמל",
+    "nameEn": "Haifa Hof HaCarmel",
+    "coordinates": [32.79, 34.99],
+    "line": "Coast Line",
+    "dailyPassengers": 18000
+  },
+  {
+    "name": "הרצליה",
+    "nameEn": "Herzliya",
+    "coordinates": [32.16, 34.78],
+    "line": "Coast Line",
+    "dailyPassengers": 15000
+  },
+  {
+    "name": "באר שבע מרכז",
+    "nameEn": "Beer Sheva Central",
+    "coordinates": [31.25, 34.79],
+    "line": "Beer Sheva Line",
+    "dailyPassengers": 14000
+  },
+  {
+    "name": "בני ברק",
+    "nameEn": "Bnei Brak",
+    "coordinates": [32.09, 34.83],
+    "line": "Ayalon Line",
+    "dailyPassengers": 13000
+  },
+  {
+    "name": "נתניה",
+    "nameEn": "Netanya",
+    "coordinates": [32.33, 34.86],
+    "line": "Coast Line",
+    "dailyPassengers": 12000
+  },
+  {
+    "name": "רחובות",
+    "nameEn": "Rehovot",
+    "coordinates": [31.89, 34.81],
+    "line": "Beer Sheva Line",
+    "dailyPassengers": 11000
+  },
+  {
+    "name": "פתח תקווה",
+    "nameEn": "Petah Tikva",
+    "coordinates": [32.09, 34.88],
+    "line": "Eastern Line",
+    "dailyPassengers": 10000
+  },
+  {
+    "name": "מודיעין - מרכז",
+    "nameEn": "Modi'in Central",
+    "coordinates": [31.89, 35.01],
+    "line": "Modi'in Line",
+    "dailyPassengers": 9000
+  },
+  {
+    "name": "אשדוד עד הלום",
+    "nameEn": "Ashdod Ad Halom",
+    "coordinates": [31.80, 34.65],
+    "line": "Southern Line",
+    "dailyPassengers": 9000
+  },
+  {
+    "name": "ראשון לציון - משה דיין",
+    "nameEn": "Rishon LeZion Moshe Dayan",
+    "coordinates": [31.97, 34.77],
+    "line": "Ayalon Line",
+    "dailyPassengers": 8000
+  },
+  {
+    "name": "לוד",
+    "nameEn": "Lod",
+    "coordinates": [31.95, 34.88],
+    "line": "Junction Station",
+    "dailyPassengers": 7000
+  },
+  {
+    "name": "נהריה",
+    "nameEn": "Nahariya",
+    "coordinates": [33.01, 35.10],
+    "line": "Coast Line (Northern terminus)",
+    "dailyPassengers": 5000
+  },
+  {
+    "name": "עכו",
+    "nameEn": "Akko",
+    "coordinates": [32.93, 35.08],
+    "line": "Coast Line",
+    "dailyPassengers": 4000
+  }
+]

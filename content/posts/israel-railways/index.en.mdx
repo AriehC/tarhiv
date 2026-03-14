@@ -1,0 +1,128 @@
+Between the Jordan Valley and the Mediterranean coast, between Jerusalem in the hills and Beer Sheva in the Negev, stretches a network of rails that tells the story of a nation. Israel Railways is more than just a mode of transportation — it is a main artery connecting cities, communities, and people, reflecting more than a century of dreams, crises, and revival. From the first Ottoman locomotive that traveled from Jaffa to Jerusalem in 1892, to the high-speed train that now covers the same route in just 28 minutes — this is a story of dramatic transformation.
+
+export const keyStats = [
+  { value: "~70M", label: "Passengers/Year", icon: "Users" },
+  { value: "69", label: "Active Stations", icon: "MapPin" },
+  { value: "1,138", label: "km of Track", icon: "Route" },
+  { value: "600+", label: "Daily Services", icon: "Train" },
+  { value: "193", label: "Locomotives", icon: "Zap" },
+  { value: "15", label: "Passenger Lines", icon: "GitBranch" },
+];
+
+<StatGrid stats={keyStats} title="Israel Railways in Numbers" />
+
+## Impressive Growth: From 25 Million to 70 Million
+
+The most striking statistic about Israel Railways is its growth rate. In 2005, around 25 million passengers rode the train annually. By 2024, that number had nearly tripled — to 70 million. This is a growth rate that very few rail networks in the world have achieved, and it reflects a deep cultural shift in Israel's relationship with public transportation.
+
+export const passengerData = [
+  { year: "2005", passengers: 25 },
+  { year: "2008", passengers: 32 },
+  { year: "2010", passengers: 35 },
+  { year: "2012", passengers: 40 },
+  { year: "2014", passengers: 44 },
+  { year: "2016", passengers: 52 },
+  { year: "2018", passengers: 60 },
+  { year: "2019", passengers: 65 },
+  { year: "2020", passengers: 25 },
+  { year: "2021", passengers: 35 },
+  { year: "2022", passengers: 53 },
+  { year: "2023", passengers: 62 },
+  { year: "2024", passengers: 70 },
+];
+
+<DataChart type="area" data={passengerData} xKey="year" yKeys={[{ key: "passengers", label: "Passengers (Millions)", color: "#3b82f6" }]} title="Annual Passenger Growth (Millions)" />
+
+<InfoCard type="warning" title="The COVID Impact">
+The COVID-19 pandemic in 2020 slashed passenger numbers by approximately 62% — from 65 million in 2019 to just 25 million. Prolonged lockdowns, public transit restrictions, and the shift to remote work brought the railway to its lowest point in two decades. But the recovery was equally impressive: within just four years, ridership surpassed previous records, reaching an all-time high of 70 million passengers in 2024 — 8% above pre-pandemic levels.
+</InfoCard>
+
+## Station Map
+
+From Nahariya in the north to Beer Sheva in the south, 69 active stations serve the majority of Israel's population. The highest concentration is, naturally, in the Tel Aviv metropolitan area — the heart of the country's economic and social activity.
+
+export const stationsMapData = [
+  { id: "tlv", name: "Tel Aviv Savidor Central", coordinates: [34.78, 32.06], value: 45000 },
+  { id: "haifa", name: "Haifa Hof HaCarmel", coordinates: [34.99, 32.79], value: 18000 },
+  { id: "jerusalem", name: "Jerusalem Yitzhak Navon", coordinates: [35.20, 31.79], value: 22000 },
+  { id: "beersheva", name: "Beer Sheva Central", coordinates: [34.79, 31.25], value: 14000 },
+  { id: "netanya", name: "Netanya", coordinates: [34.86, 32.33], value: 12000 },
+  { id: "herzliya", name: "Herzliya", coordinates: [34.78, 32.16], value: 15000 },
+  { id: "ashdod", name: "Ashdod", coordinates: [34.65, 31.80], value: 9000 },
+  { id: "rehovot", name: "Rehovot", coordinates: [34.81, 31.89], value: 11000 },
+  { id: "nahariya", name: "Nahariya", coordinates: [35.10, 33.01], value: 5000 },
+  { id: "akko", name: "Akko", coordinates: [35.08, 32.93], value: 4000 },
+  { id: "bnei-brak", name: "Bnei Brak", coordinates: [34.83, 32.09], value: 13000 },
+  { id: "petah-tikva", name: "Petah Tikva", coordinates: [34.88, 32.09], value: 10000 },
+  { id: "rishon", name: "Rishon LeZion", coordinates: [34.77, 31.97], value: 8000 },
+  { id: "lod", name: "Lod", coordinates: [34.88, 31.95], value: 7000 },
+  { id: "modiin", name: "Modi'in", coordinates: [35.01, 31.89], value: 9000 },
+];
+
+<InteractiveMap mapType="israel" data={stationsMapData} title="Major Rail Stations in Israel" colorScale={["#93c5fd", "#1d4ed8"]} showLegend />
+
+## Timeline: From 1892 to Today
+
+The history of railways in Israel is a microcosm of the country's own history. From the Ottoman Empire through the British Mandate, the War of Independence, the low years of the 1970s and 1980s, to the remarkable renaissance of the past two decades.
+
+export const timelineEvents = [
+  { date: "1892", title: "The First Train", description: "The first railway line in the Land of Israel opened between Jaffa and Jerusalem. The journey took approximately 3.5 hours over 87 km.", highlight: true },
+  { date: "1904", title: "Jezreel Valley Railway", description: "The Jezreel Valley Railway opened, part of the Hejaz Railway project connecting Damascus to the region." },
+  { date: "1948", title: "Israel Railways Founded", description: "With the establishment of the state, Israel Railways was founded as a government company based on British Mandate infrastructure.", highlight: true },
+  { date: "1977", title: "The Low Point", description: "The 1970s marked the railway's nadir. Neglected infrastructure, low frequency, and plans to close lines entirely." },
+  { date: "2001", title: "Modernization Begins", description: "A new strategic plan was launched, including new rolling stock, track upgrades, and station construction." },
+  { date: "2018", title: "Jerusalem High-Speed Line", description: "After numerous delays, the high-speed Tel Aviv–Jerusalem line opened. Travel time was reduced to just 28 minutes." },
+  { date: "2024", title: "Record 70 Million", description: "Israel Railways reached a historic record of approximately 70 million annual passengers — nearly triple the 2005 figure.", highlight: true },
+];
+
+<Timeline events={timelineEvents} title="Key Milestones in Railway History" color="#1d4ed8" />
+
+## International Comparison
+
+When comparing Israel Railways to European countries of similar size, one can see both the achievements and the gaps. Israel still lags significantly in per-capita ridership and electrification levels, but its growth rate is exceptional.
+
+export const comparisonColumns = [
+  { key: "israel", label: "Israel" },
+  { key: "switzerland", label: "Switzerland" },
+  { key: "netherlands", label: "Netherlands" },
+  { key: "denmark", label: "Denmark" },
+];
+
+export const comparisonRows = [
+  { label: "Passengers per Capita (Annual)", values: { israel: 7.3, switzerland: 48.3, netherlands: 17.8, denmark: 31.0 }, type: "bar" },
+  { label: "Stations", values: { israel: 69, switzerland: 794, netherlands: 397, denmark: 234 }, type: "number" },
+  { label: "Network (km)", values: { israel: 1138, switzerland: 5317, netherlands: 3055, denmark: 2633 }, type: "bar" },
+  { label: "Electrification", values: { israel: "Partial", switzerland: "Full", netherlands: "Full", denmark: "Full" }, type: "text" },
+];
+
+<ComparisonTable columns={comparisonColumns} rows={comparisonRows} title="Comparison with European Countries" highlightColumn="israel" />
+
+The most striking gap is in passengers per capita: 7.3 in Israel versus 48.3 in Switzerland. However, it's worth noting that Switzerland has been continuously developing its railway since the 19th century, while Israel essentially started over only in the early 2000s. The rate at which Israel is closing these gaps is exceptional.
+
+## Looking Ahead
+
+Israel Railways is in the midst of an ambitious expansion plan that will reshape the country's transportation map.
+
+export const futureStats = [
+  { value: "100+", label: "km New Track", icon: "Route" },
+  { value: "7", label: "New Stations", icon: "MapPin" },
+  { value: "2", label: "New Lines", icon: "Plus" },
+];
+
+<StatGrid stats={futureStats} title="Expansion Plans" />
+
+<InfoCard type="info" title="The Eastern Railway and Rishon–Modi'in Line">
+The two flagship projects in the pipeline are the **Eastern Railway** — a new line running through eastern Gush Dan that will dramatically reduce commute times from the periphery to the center — and the **Rishon LeZion–Modi'in line**, creating a direct new connection between the two cities. These projects are expected to add tens of thousands of daily passengers and reduce congestion on major traffic corridors.
+</InfoCard>
+
+Furthermore, the full network electrification plan — expected to be completed by 2030 — will enable quieter, faster, and more environmentally friendly rail service. The transition from diesel to electric locomotives will reduce the railway's air pollutant emissions by approximately 80%.
+
+<ScrollReveal>
+
+<QuoteBlock author="David Ben-Gurion" role="Israel's First Prime Minister">
+Nothing symbolizes development and progress like a railway. It connects not only cities — it connects people, ideas, and hopes.
+</QuoteBlock>
+
+</ScrollReveal>
+
+Israel Railways has come a long way — from an Ottoman steam engine to a high-speed electric train. It survived wars, neglect, and a pandemic, and each time it rose again. Within its 1,138 kilometers lies a story of resilience, innovation, and hope — a story that is still being written.

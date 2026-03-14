@@ -1,0 +1,51 @@
+{
+  "site": {
+    "name": "תרחיב",
+    "description": "בלוג ישראלי ויזואלי על הנושאים שמעניינים אותנו"
+  },
+  "nav": {
+    "home": "דף הבית",
+    "posts": "פוסטים",
+    "about": "אודות",
+    "login": "התחברות",
+    "logout": "התנתקות",
+    "profile": "פרופיל"
+  },
+  "home": {
+    "hero_title": "תרחיב",
+    "hero_subtitle": "נושאים ישראליים, בצורה שלא ראית",
+    "featured": "פוסטים מובילים",
+    "all_posts": "כל הפוסטים",
+    "read_more": "קרא עוד",
+    "min_read": "דקות קריאה"
+  },
+  "post": {
+    "share": "שתף",
+    "comments": "תגובות",
+    "write_comment": "כתוב תגובה...",
+    "submit_comment": "שלח",
+    "login_to_comment": "התחבר כדי להגיב",
+    "no_comments": "אין תגובות עדיין. היה הראשון להגיב!",
+    "back_to_posts": "חזור לפוסטים"
+  },
+  "footer": {
+    "about": "תרחיב הוא בלוג ויזואלי שמטרתו להרחיב את הידע על נושאים ישראליים מרכזיים",
+    "links": "קישורים",
+    "contact": "צור קשר",
+    "rights": "כל הזכויות שמורות"
+  },
+  "auth": {
+    "sign_in_google": "התחבר עם Google",
+    "sign_in_email": "התחבר עם אימייל",
+    "sign_out": "התנתק"
+  },
+  "categories": {
+    "all": "הכל",
+    "infrastructure": "תשתיות",
+    "society": "חברה",
+    "history": "היסטוריה",
+    "environment": "סביבה",
+    "economy": "כלכלה",
+    "culture": "תרבות"
+  }
+}

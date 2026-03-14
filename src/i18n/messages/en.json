@@ -1,0 +1,51 @@
+{
+  "site": {
+    "name": "Tarchiv",
+    "description": "A visual Israeli blog about the topics that matter"
+  },
+  "nav": {
+    "home": "Home",
+    "posts": "Posts",
+    "about": "About",
+    "login": "Login",
+    "logout": "Logout",
+    "profile": "Profile"
+  },
+  "home": {
+    "hero_title": "Tarchiv",
+    "hero_subtitle": "Israeli topics, like you've never seen",
+    "featured": "Featured Posts",
+    "all_posts": "All Posts",
+    "read_more": "Read More",
+    "min_read": "min read"
+  },
+  "post": {
+    "share": "Share",
+    "comments": "Comments",
+    "write_comment": "Write a comment...",
+    "submit_comment": "Submit",
+    "login_to_comment": "Login to comment",
+    "no_comments": "No comments yet. Be the first to comment!",
+    "back_to_posts": "Back to posts"
+  },
+  "footer": {
+    "about": "Tarchiv is a visual blog that aims to expand knowledge about key Israeli topics",
+    "links": "Links",
+    "contact": "Contact",
+    "rights": "All rights reserved"
+  },
+  "auth": {
+    "sign_in_google": "Sign in with Google",
+    "sign_in_email": "Sign in with Email",
+    "sign_out": "Sign Out"
+  },
+  "categories": {
+    "all": "All",
+    "infrastructure": "Infrastructure",
+    "society": "Society",
+    "history": "History",
+    "environment": "Environment",
+    "economy": "Economy",
+    "culture": "Culture"
+  }
+}

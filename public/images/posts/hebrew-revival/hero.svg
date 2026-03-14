@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#120a20"/>
+      <stop offset="100%" stop-color="#0a0a1a"/>
+    </linearGradient>
+    <radialGradient id="glow-main" cx="0.5" cy="0.45">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.2"/>
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-cyan" cx="0.3" cy="0.6">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="neon">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft-glow">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+    <linearGradient id="text-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <ellipse cx="600" cy="270" rx="500" ry="350" fill="url(#glow-main)"/>
+  <ellipse cx="350" cy="400" rx="300" ry="250" fill="url(#glow-cyan)"/>
+
+  <!-- Ancient scroll pattern lines -->
+  <g stroke="#a855f7" stroke-width="0.3" opacity="0.06">
+    <line x1="200" y1="100" x2="1000" y2="100"/>
+    <line x1="180" y1="140" x2="1020" y2="140"/>
+    <line x1="200" y1="180" x2="1000" y2="180"/>
+    <line x1="180" y1="220" x2="1020" y2="220"/>
+    <line x1="200" y1="260" x2="1000" y2="260"/>
+    <line x1="180" y1="300" x2="1020" y2="300"/>
+    <line x1="200" y1="340" x2="1000" y2="340"/>
+    <line x1="180" y1="380" x2="1020" y2="380"/>
+    <line x1="200" y1="420" x2="1000" y2="420"/>
+    <line x1="180" y1="460" x2="1020" y2="460"/>
+    <line x1="200" y1="500" x2="1000" y2="500"/>
+  </g>
+
+  <!-- Hebrew letters floating (ancient → modern) -->
+  <!-- Large center letter: Alef -->
+  <text x="545" y="340" fill="url(#text-grad)" font-size="180" font-family="serif" opacity="0.2" filter="url(#neon)">א</text>
+
+  <!-- Scattered Hebrew letters at various sizes and opacities -->
+  <g font-family="serif" fill="#06b6d4">
+    <text x="150" y="180" font-size="60" opacity="0.08">ב</text>
+    <text x="280" y="250" font-size="45" opacity="0.1">ג</text>
+    <text x="900" y="200" font-size="55" opacity="0.09">ד</text>
+    <text x="1000" y="350" font-size="50" opacity="0.07">ה</text>
+    <text x="100" y="400" font-size="40" opacity="0.06">ו</text>
+    <text x="350" y="480" font-size="48" opacity="0.08">ז</text>
+    <text x="800" y="450" font-size="42" opacity="0.07">ח</text>
+    <text x="1050" y="180" font-size="38" opacity="0.06">ט</text>
+  </g>
+  <g font-family="serif" fill="#a855f7">
+    <text x="200" y="350" font-size="35" opacity="0.06">י</text>
+    <text x="750" y="150" font-size="52" opacity="0.08">כ</text>
+    <text x="450" y="500" font-size="44" opacity="0.07">ל</text>
+    <text x="950" y="500" font-size="36" opacity="0.05">מ</text>
+    <text x="130" y="520" font-size="40" opacity="0.06">נ</text>
+    <text x="700" y="520" font-size="38" opacity="0.05">ע</text>
+  </g>
+
+  <!-- Timeline arrow (past → present) -->
+  <g filter="url(#neon)">
+    <line x1="200" y1="560" x2="1000" y2="560" stroke="#06b6d4" stroke-width="1.5" opacity="0.3"/>
+    <polygon points="1000,560 990,555 990,565" fill="#06b6d4" opacity="0.3"/>
+    <!-- Timeline markers -->
+    <circle cx="250" cy="560" r="3" fill="#a855f7" opacity="0.4"/>
+    <circle cx="450" cy="560" r="3" fill="#a855f7" opacity="0.5"/>
+    <circle cx="650" cy="560" r="3" fill="#06b6d4" opacity="0.6"/>
+    <circle cx="850" cy="560" r="4" fill="#06b6d4" opacity="0.8"/>
+    <!-- Labels -->
+    <text x="230" y="550" fill="#a855f7" font-size="9" font-family="monospace" opacity="0.3">1000 BCE</text>
+    <text x="440" y="550" fill="#a855f7" font-size="9" font-family="monospace" opacity="0.3">200 CE</text>
+    <text x="640" y="550" fill="#06b6d4" font-size="9" font-family="monospace" opacity="0.4">1881</text>
+    <text x="840" y="550" fill="#06b6d4" font-size="9" font-family="monospace" opacity="0.5">2025</text>
+  </g>
+
+  <!-- DNA/helix-like structure representing language evolution -->
+  <g stroke="#a855f7" stroke-width="1" fill="none" opacity="0.12">
+    <path d="M580,80 Q620,120 580,160 Q540,200 580,240 Q620,280 580,320 Q540,360 580,400 Q620,440 580,480"/>
+    <path d="M620,80 Q580,120 620,160 Q660,200 620,240 Q580,280 620,320 Q660,360 620,400 Q580,440 620,480"/>
+    <!-- Cross connections -->
+    <line x1="580" y1="120" x2="620" y2="120" opacity="0.5"/>
+    <line x1="580" y1="200" x2="620" y2="200" opacity="0.5"/>
+    <line x1="580" y1="280" x2="620" y2="280" opacity="0.5"/>
+    <line x1="580" y1="360" x2="620" y2="360" opacity="0.5"/>
+    <line x1="580" y1="440" x2="620" y2="440" opacity="0.5"/>
+  </g>
+
+  <!-- Floating particles -->
+  <g fill="#06b6d4" opacity="0.35">
+    <circle cx="80" cy="100" r="1.5"/><circle cx="1120" cy="80" r="1"/>
+    <circle cx="50" cy="300" r="1.2"/><circle cx="1150" cy="280" r="1.5"/>
+  </g>
+  <g fill="#a855f7" opacity="0.25">
+    <circle cx="300" cy="80" r="1"/><circle cx="900" cy="90" r="1.2"/>
+    <circle cx="1080" cy="450" r="1"/><circle cx="70" cy="480" r="1"/>
+  </g>
+</svg>

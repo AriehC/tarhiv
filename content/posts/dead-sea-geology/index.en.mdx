@@ -1,0 +1,116 @@
+At a depth of 430.5 meters below sea level lies the lowest body of water on Earth. The Dead Sea is not merely a geographic phenomenon — it is a living laboratory for geological, chemical, and ecological processes occurring here at a scale unmatched anywhere else in the world. Floating in waters so saline that no life can survive, gazing at salt pillars carved over thousands of years, you discover an extreme environment that tells the story of our planet.
+
+export const keyStats = [
+  { value: "-430.5", label: "Meters Below Sea Level", icon: "ArrowDown" },
+  { value: "34.2%", label: "Salinity", icon: "Droplets" },
+  { value: "67", label: "km Length", icon: "Ruler" },
+  { value: "18", label: "km Max Width", icon: "Maximize2" },
+  { value: "1.2", label: "Meters Drop/Year", icon: "TrendingDown" },
+  { value: "3M", label: "Years of Existence", icon: "Clock" },
+];
+
+<StatGrid stats={keyStats} title="The Dead Sea in Numbers" />
+
+## Constant Decline: 1.2 Meters Per Year
+
+The most alarming statistic about the Dead Sea is its rate of water level decline. Since the 1960s, the Dead Sea's water level has been dropping at an average of approximately 1.2 meters per year — a total decline of more than 35 meters. The primary causes are the diversion of Jordan River waters for agriculture and drinking, and water pumping by Dead Sea mineral extraction plants for potash production.
+
+export const levelData = [
+  { year: "1930", level: -390 },
+  { year: "1940", level: -392 },
+  { year: "1950", level: -393 },
+  { year: "1960", level: -395 },
+  { year: "1970", level: -398 },
+  { year: "1980", level: -402 },
+  { year: "1990", level: -408 },
+  { year: "2000", level: -414 },
+  { year: "2005", level: -418 },
+  { year: "2010", level: -423 },
+  { year: "2015", level: -427 },
+  { year: "2020", level: -430 },
+  { year: "2025", level: -432 },
+];
+
+<DataChart type="line" data={levelData} xKey="year" yKeys={[{ key: "level", label: "Level (meters below sea level)", color: "#06b6d4" }]} title="Dead Sea Water Level Decline Over Time" />
+
+<InfoCard type="warning" title="Sinkholes: A Growing Danger">
+One of the most dramatic consequences of the declining water level is the formation of sinkholes. Since the 1980s, over 6,000 sinkholes have appeared along the Dead Sea's shores. They form when fresh groundwater dissolves underground salt layers, creating cavities that cause the surface to collapse. These sinkholes have caused severe damage to infrastructure, roads, and tourism facilities, and have even forced the evacuation of entire kibbutzim.
+</InfoCard>
+
+## Chemical Composition: Not Just Salty Water
+
+The Dead Sea is fundamentally different from any other body of water. While regular ocean water contains about 3.5% salt (primarily sodium chloride), the Dead Sea contains 34.2% minerals — nearly ten times as much. But the difference isn't just in quantity — it's in composition.
+
+export const mineralData = [
+  { mineral: "Magnesium Chloride", deadSea: 50.8, ocean: 3.7 },
+  { mineral: "Sodium Chloride", deadSea: 30.4, ocean: 85.6 },
+  { mineral: "Calcium Chloride", deadSea: 14.4, ocean: 0.3 },
+  { mineral: "Potassium Chloride", deadSea: 4.4, ocean: 1.1 },
+];
+
+<DataChart type="bar" data={mineralData} xKey="mineral" yKeys={[{ key: "deadSea", label: "Dead Sea (%)", color: "#06b6d4" }, { key: "ocean", label: "Ocean (%)", color: "#a855f7" }]} title="Mineral Composition: Dead Sea vs. Ocean" />
+
+The high concentration of magnesium chloride is what gives the Dead Sea its unique properties — the extreme buoyancy, the oily sensation of the water, and the therapeutic qualities that attract hundreds of thousands of visitors each year.
+
+## Timeline: Geological History
+
+The Dead Sea was formed as a result of tectonic processes that began millions of years ago. The Syrian-African Rift — one of the largest geological fractures in the world — created the Jordan Valley and the depression in which the Dead Sea sits.
+
+export const timelineEvents = [
+  { date: "3 Million Years", title: "Formation of the Rift", description: "The Syrian-African Rift creates the Jordan Valley. Tectonic movements shape the geography of the region.", highlight: true },
+  { date: "2 Million Years", title: "The Sedom Sea", description: "A vast ancient sea fills the entire Jordan Valley from the Sea of Galilee to the Negev. It stretched some 200 km in length." },
+  { date: "70,000 Years", title: "Lake Lisan", description: "The Sedom Sea shrinks, leaving behind a large freshwater lake — Lake Lisan. Its traces are visible in the sediment layers along the Dead Sea shores." },
+  { date: "18,000 Years", title: "Birth of the Dead Sea", description: "Lake Lisan dries up almost completely, and in its place the Dead Sea forms as we know it — small, deep, and extremely salty.", highlight: true },
+  { date: "1960s", title: "The Decline Begins", description: "The diversion of Jordan River waters begins to take its toll. The Dead Sea's water level starts dropping at an increasing rate." },
+  { date: "2025", title: "Current State", description: "The water level stands at approximately 432 meters below sea level. Rescue projects are in planning stages.", highlight: true },
+];
+
+<Timeline events={timelineEvents} title="Geological Timeline" color="#06b6d4" />
+
+## Comparison with Extreme Water Bodies
+
+The Dead Sea is not the only extreme body of water in the world. Let's compare it to other lakes and seas known for their exceptional properties.
+
+export const comparisonColumns = [
+  { key: "deadSea", label: "Dead Sea" },
+  { key: "gaetale", label: "Gaet'ale (Ethiopia)" },
+  { key: "caspian", label: "Caspian Sea" },
+  { key: "baikal", label: "Lake Baikal" },
+];
+
+export const comparisonRows = [
+  { label: "Elevation (m)", values: { deadSea: "-430", gaetale: "-155", caspian: "-28", baikal: "455" }, type: "number" },
+  { label: "Salinity (%)", values: { deadSea: "34.2", gaetale: "43.3", caspian: "1.2", baikal: "0.001" }, type: "bar" },
+  { label: "Area (km²)", values: { deadSea: "605", gaetale: "0.04", caspian: "371,000", baikal: "31,722" }, type: "number" },
+  { label: "Marine Life", values: { deadSea: "No", gaetale: "No", caspian: "Yes", baikal: "Yes" }, type: "text" },
+];
+
+<ComparisonTable columns={comparisonColumns} rows={comparisonRows} title="Comparison with Extreme Water Bodies" highlightColumn="deadSea" />
+
+Although Gaet'ale Pond in Ethiopia is saltier, the Dead Sea remains the lowest body of water on Earth and one of the most geologically fascinating places on the planet.
+
+## Looking Ahead: Saving the Dead Sea
+
+Several initiatives are currently underway to slow the decline in the Dead Sea's water level and potentially stabilize it.
+
+export const futureStats = [
+  { value: "$2B", label: "Annual Budget", icon: "Banknote" },
+  { value: "300M", label: "Cubic m/Year (Planned)", icon: "Droplets" },
+  { value: "180", label: "km Planned Canal", icon: "Route" },
+];
+
+<StatGrid stats={futureStats} title="Dead Sea Rescue Initiatives" />
+
+<InfoCard type="info" title="The Red-Dead Canal: Dream or Reality?">
+The most ambitious project is the **Red-Dead Canal** — a conduit that would transport water from the Red Sea to the Dead Sea. The plan includes building a desalination facility along the way, to provide drinking water to Jordan, Israel, and the Palestinian Authority. However, the project raises environmental concerns: altering the Dead Sea's chemical composition could cause the water to whiten and damage the area's unique natural phenomena.
+</InfoCard>
+
+<ScrollReveal>
+
+<QuoteBlock author="Theodor Herzl" role="Visionary of the Jewish State, Altneuland (1902)">
+The Dead Sea... awaits revival. The same forces of nature that buried it are the forces that will bring it back to life.
+</QuoteBlock>
+
+</ScrollReveal>
+
+The Dead Sea is a living paradox — a place where there is no life, yet full of stories. It reflects the deep connection between humanity and nature, between exploitation and conservation efforts, between an ancient geological past and an uncertain human future. Whether the Red-Dead Canal project succeeds or not, the Dead Sea will continue to be one of the most fascinating natural wonders on Earth — until geology decides otherwise.

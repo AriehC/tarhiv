@@ -1,0 +1,72 @@
+[
+  {
+    "period": "1492",
+    "from": "Spain",
+    "to": "Ottoman Empire",
+    "count": 200000,
+    "fromCoords": [40.42, -3.70],
+    "toCoords": [41.01, 28.98],
+    "description": "גירוש יהודי ספרד. כ-200 אלף יהודים מגורשים, רבים מוצאים מקלט באימפריה העות׳מאנית, בצפון אפריקה ובאיטליה.",
+    "descriptionEn": "Expulsion of Spanish Jews. Approximately 200,000 Jews expelled, many finding refuge in the Ottoman Empire, North Africa, and Italy."
+  },
+  {
+    "period": "1881-1924",
+    "from": "Eastern Europe",
+    "to": "United States",
+    "count": 2500000,
+    "fromCoords": [52.23, 21.01],
+    "toCoords": [40.71, -74.01],
+    "description": "ההגירה הגדולה: יותר מ-2.5 מיליון יהודים ממזרח אירופה — בעיקר מרוסיה, פולין וגליציה — נודדים לארצות הברית בעקבות פוגרומים ועוני.",
+    "descriptionEn": "The Great Migration: more than 2.5 million Jews from Eastern Europe — mainly Russia, Poland, and Galicia — migrate to the United States fleeing pogroms and poverty."
+  },
+  {
+    "period": "1933-1939",
+    "from": "Germany / Central Europe",
+    "to": "Palestine (British Mandate)",
+    "count": 250000,
+    "fromCoords": [52.52, 13.41],
+    "toCoords": [32.07, 34.77],
+    "description": "העלייה החמישית: כ-250 אלף יהודים עולים לארץ ישראל מגרמניה ומרכז אירופה בעקבות עליית הנאצים.",
+    "descriptionEn": "The Fifth Aliyah: approximately 250,000 Jews immigrate to Palestine from Germany and Central Europe following the Nazi rise to power."
+  },
+  {
+    "period": "1948-1972",
+    "from": "Arab Countries",
+    "to": "Israel",
+    "count": 850000,
+    "fromCoords": [33.89, 35.50],
+    "toCoords": [32.07, 34.77],
+    "description": "יציאת יהודי ארצות ערב: כ-850 אלף יהודים עוזבים או מגורשים ממדינות ערב וצפון אפריקה — עיראק, מרוקו, תימן, מצרים, תוניסיה ולוב.",
+    "descriptionEn": "Exodus from Arab lands: approximately 850,000 Jews leave or are expelled from Arab countries and North Africa — Iraq, Morocco, Yemen, Egypt, Tunisia, and Libya."
+  },
+  {
+    "period": "1989-2000",
+    "from": "Soviet Union / FSU",
+    "to": "Israel",
+    "count": 1000000,
+    "fromCoords": [55.75, 37.62],
+    "toCoords": [32.07, 34.77],
+    "description": "העלייה מברית המועצות: כמיליון יהודים עולים לישראל לאחר נפילת מסך הברזל. הגל הגדול ביותר מאז קום המדינה.",
+    "descriptionEn": "Soviet Aliyah: approximately one million Jews immigrate to Israel after the fall of the Iron Curtain. The largest wave since the state's founding."
+  },
+  {
+    "period": "1984-2013",
+    "from": "Ethiopia",
+    "to": "Israel",
+    "count": 92000,
+    "fromCoords": [9.02, 38.75],
+    "toCoords": [32.07, 34.77],
+    "description": "עליית יהודי אתיופיה: כ-92 אלף יהודים עולים מאתיופיה לישראל במבצעים דרמטיים כמו מבצע משה (1984) ומבצע שלמה (1991).",
+    "descriptionEn": "Ethiopian Aliyah: approximately 92,000 Jews immigrate from Ethiopia to Israel in dramatic operations such as Operation Moses (1984) and Operation Solomon (1991)."
+  },
+  {
+    "period": "2000-2025",
+    "from": "France",
+    "to": "Israel",
+    "count": 80000,
+    "fromCoords": [48.86, 2.35],
+    "toCoords": [32.07, 34.77],
+    "description": "עלייה מצרפת: כ-80 אלף יהודים צרפתיים עולים לישראל בעקבות גל אנטישמיות ופיגועי טרור.",
+    "descriptionEn": "French Aliyah: approximately 80,000 French Jews immigrate to Israel following a wave of antisemitism and terror attacks."
+  }
+]

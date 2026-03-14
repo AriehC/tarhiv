@@ -1,0 +1,160 @@
+They live in Shanghai and Sao Paulo, in Marrakech and Melbourne, in Uman and Umm al-Fahm. 15.8 million Jews — less than a quarter of one percent of the world's population — are scattered across more than a hundred countries, yet they maintain a shared identity thousands of years old. The story of the Jewish diaspora is one of the most remarkable in human history: a story of exiles and redemptions, of loss and preservation, of a people who refused to disappear.
+
+export const keyStats = [
+  { value: "15.8M", label: "Jews Worldwide", icon: "Globe" },
+  { value: "0.2%", label: "of World Population", icon: "Percent" },
+  { value: "7.2M", label: "in Israel", icon: "Home" },
+  { value: "85%", label: "in Israel & USA", icon: "MapPin" },
+  { value: "6.3M", label: "in the USA", icon: "Flag" },
+  { value: "100+", label: "Countries with Presence", icon: "Map" },
+];
+
+<StatGrid stats={keyStats} title="The Jewish Diaspora in Numbers" />
+
+## The Global Distribution Map
+
+The map of the Jewish diaspora is a map of extremes. On one hand, enormous concentration: nearly 85% of all Jews in the world live in just two countries — Israel and the United States. On the other, wide dispersion: Jewish communities exist on every continent, from Australia to South America, from Africa to Asia.
+
+export const worldMapData = [
+  { id: "ISR", name: "Israel", value: 7200000 },
+  { id: "USA", name: "United States", value: 6300000 },
+  { id: "FRA", name: "France", value: 440000 },
+  { id: "CAN", name: "Canada", value: 398000 },
+  { id: "GBR", name: "United Kingdom", value: 312000 },
+  { id: "ARG", name: "Argentina", value: 171000 },
+  { id: "RUS", name: "Russia", value: 132000 },
+  { id: "DEU", name: "Germany", value: 125000 },
+  { id: "AUS", name: "Australia", value: 117000 },
+  { id: "BRA", name: "Brazil", value: 91000 },
+  { id: "ZAF", name: "South Africa", value: 52000 },
+  { id: "UKR", name: "Ukraine", value: 45000 },
+  { id: "HUN", name: "Hungary", value: 47000 },
+  { id: "MEX", name: "Mexico", value: 40000 },
+  { id: "BEL", name: "Belgium", value: 29000 },
+  { id: "ITA", name: "Italy", value: 27000 },
+  { id: "NLD", name: "Netherlands", value: 30000 },
+  { id: "CHE", name: "Switzerland", value: 18000 },
+  { id: "CHL", name: "Chile", value: 16000 },
+  { id: "URY", name: "Uruguay", value: 16000 },
+  { id: "TUR", name: "Turkey", value: 15000 },
+  { id: "SWE", name: "Sweden", value: 15000 },
+  { id: "ESP", name: "Spain", value: 13000 },
+  { id: "PAN", name: "Panama", value: 10000 },
+  { id: "AUT", name: "Austria", value: 10000 },
+  { id: "COL", name: "Colombia", value: 9000 },
+  { id: "NZL", name: "New Zealand", value: 7000 },
+  { id: "IND", name: "India", value: 5000 },
+  { id: "MAR", name: "Morocco", value: 2000 },
+];
+
+<InteractiveMap mapType="world" data={worldMapData} title="Jewish Population by Country" colorScale={["#fef3c7", "#b45309"]} showLegend />
+
+## Population Breakdown: Three Groups
+
+Looking at the data from the highest level, the Jewish people divide into three main groups: Israel (45.6%), the United States (39.9%), and the rest of the world (14.5%). This bipolar concentration is a unique phenomenon — very few peoples in the world are so concentrated in just two countries.
+
+export const distributionData = [
+  { name: "Israel", value: 7200000 },
+  { name: "United States", value: 6300000 },
+  { name: "Rest of World", value: 2300000 },
+];
+
+<DataChart type="pie" data={distributionData} xKey="name" yKeys={[{ key: "value", label: "Population", color: "#3b82f6" }]} title="Global Jewish Population Distribution" />
+
+## Ten Largest Communities Outside Israel
+
+Outside Israel, the United States dominates absolutely with 6.3 million Jews — more than all other countries combined. France, with 440,000, is the third-largest community in the world — but it is shrinking due to aliyah (immigration to Israel) and rising antisemitism.
+
+export const topCommunitiesData = [
+  { country: "USA", population: 6300000 },
+  { country: "France", population: 440000 },
+  { country: "Canada", population: 398000 },
+  { country: "UK", population: 312000 },
+  { country: "Argentina", population: 171000 },
+  { country: "Russia", population: 132000 },
+  { country: "Germany", population: 125000 },
+  { country: "Australia", population: 117000 },
+  { country: "Brazil", population: 91000 },
+  { country: "South Africa", population: 52000 },
+];
+
+<DataChart type="bar" data={topCommunitiesData} xKey="country" yKeys={[{ key: "population", label: "Population", color: "#7c3aed" }]} title="Ten Largest Jewish Communities Outside Israel" />
+
+## Timeline: Three Thousand Years of Exile and Migration
+
+The history of the Jewish diaspora is a history of constant movement — sometimes by choice, but more often by force. Every wave of expulsion, every pogrom, every revolution — set masses in motion from one place to another, creating new communities on the ruins of the old.
+
+export const diasporaTimeline = [
+  { date: "733 BCE", title: "Exile of the Ten Tribes", description: "The Assyrian Empire exiles the ten tribes of Israel from the Kingdom of Israel. Their traces are largely lost to history." },
+  { date: "586 BCE", title: "First Temple Destruction", description: "Nebuchadnezzar, King of Babylon, destroys the First Temple and exiles the Jews of Judah to Babylon. The beginning of the Babylonian exile.", highlight: true },
+  { date: "70 CE", title: "Second Temple Destruction", description: "The Romans destroy the Second Temple in Jerusalem. The beginning of the long exile that would last nearly two thousand years.", highlight: true },
+  { date: "1096", title: "First Crusade", description: "Massacre of Jewish communities along the Rhine Valley. Thousands of Jews murdered in Worms, Mainz, and Speyer." },
+  { date: "1290", title: "Expulsion from England", description: "Edward I expels all Jews from England. They would not return until 1656." },
+  { date: "1492", title: "Spanish Expulsion", description: "Ferdinand and Isabella expel the Jews of Spain. Approximately 200,000 Jews are expelled, many finding refuge in the Ottoman Empire." },
+  { date: "1648", title: "Khmelnytsky Massacres", description: "The Khmelnytsky uprising in Ukraine. Between 100,000 and 300,000 Jews killed in brutal pogroms." },
+  { date: "1881-1924", title: "The Great Migration to America", description: "More than 2.5 million Jews migrate from Eastern Europe to the United States, laying the foundation for the world's largest Jewish community." },
+  { date: "1933-1945", title: "The Holocaust", description: "Six million Jews murdered in the Holocaust. One-third of the Jewish people annihilated. Entire communities wiped off the map.", highlight: true },
+  { date: "1948", title: "State of Israel Established", description: "After two thousand years of exile, a Jewish state is established. The Law of Return grants every Jew the right to immigrate to Israel.", highlight: true },
+  { date: "1948-1951", title: "Mass Immigration", description: "688,000 immigrants arrive in Israel — nearly doubling its population. Many are Holocaust survivors and Jews from Arab countries." },
+  { date: "1989-2000", title: "Soviet Aliyah", description: "Approximately one million Jews immigrate from the former Soviet Union. The largest wave of immigration since the state's founding." },
+];
+
+<Timeline events={diasporaTimeline} title="Milestones in Diaspora History" color="#b45309" />
+
+## Jewish Population Throughout History
+
+The following chart tells a dramatic story: a population that grew slowly over two thousand years, peaked at 16.7 million in 1939, and then plummeted to a low of 11 million after the Holocaust. Even today, 86 years later, the population has not yet returned to its pre-Holocaust size.
+
+export const historicalPopData = [
+  { year: "1 CE", population: 5 },
+  { year: "500", population: 1.5 },
+  { year: "1000", population: 1.5 },
+  { year: "1200", population: 1 },
+  { year: "1500", population: 1 },
+  { year: "1700", population: 1.5 },
+  { year: "1800", population: 2.5 },
+  { year: "1850", population: 4.5 },
+  { year: "1880", population: 7.5 },
+  { year: "1900", population: 10.5 },
+  { year: "1925", population: 14.8 },
+  { year: "1939", population: 16.7 },
+  { year: "1945", population: 11 },
+  { year: "1950", population: 11.5 },
+  { year: "1970", population: 12.6 },
+  { year: "1990", population: 12.8 },
+  { year: "2000", population: 13.2 },
+  { year: "2010", population: 13.8 },
+  { year: "2025", population: 15.8 },
+];
+
+<DataChart type="area" data={historicalPopData} xKey="year" yKeys={[{ key: "population", label: "Population (Millions)", color: "#b45309" }]} title="Global Jewish Population Throughout History (Millions)" />
+
+<InfoCard type="fact" title="A Statistic That Cannot Be Ignored">
+86 years after the Holocaust, the global Jewish population has still not recovered to its 1939 levels. Today, 15.8 million Jews live in the world — compared to 16.7 million on the eve of World War II. The gap of approximately 900,000 is a silent testament to the depth of the wound the Holocaust left on Jewish demographics.
+</InfoCard>
+
+## Major Migration Waves
+
+The Jewish diaspora was not created in a single moment. It is the result of cumulative waves of migration, each driven by specific historical events. The following map shows the major migration routes that shaped today's Jewish geography.
+
+export const migrationFlows = [
+  { id: "flow-1", name: "Spain to Ottoman Empire (1492): 200,000", coordinates: [28.98, 41.01], value: 200000 },
+  { id: "flow-2", name: "Eastern Europe to USA (1881-1924): 2,500,000", coordinates: [-74.01, 40.71], value: 2500000 },
+  { id: "flow-3", name: "Germany/Europe to Palestine (1933-1939): 250,000", coordinates: [34.77, 32.07], value: 250000 },
+  { id: "flow-4", name: "Arab Countries to Israel (1948-1972): 850,000", coordinates: [34.77, 32.07], value: 850000 },
+  { id: "flow-5", name: "USSR to Israel (1989-2000): 1,000,000", coordinates: [34.77, 32.07], value: 1000000 },
+  { id: "flow-6", name: "Ethiopia to Israel (1984-2013): 92,000", coordinates: [34.77, 32.07], value: 92000 },
+  { id: "flow-7", name: "France to Israel (2000-2025): 80,000", coordinates: [34.77, 32.07], value: 80000 },
+];
+
+<InteractiveMap mapType="world" data={migrationFlows} title="Major Jewish Migration Waves" colorScale={["#dbeafe", "#1d4ed8"]} showLegend />
+
+<ScrollReveal>
+
+<QuoteBlock author="Amos Oz" role="Author">
+The Jewish diaspora is perhaps the greatest experiment in history on the question: what holds a people together when they have no land, no army, and no common language? The answer the Jews found — books, memory, and hope — is one of the most remarkable achievements of the human spirit.
+</QuoteBlock>
+
+</ScrollReveal>
+
+Today, for the first time in two thousand years, the majority of Jews in the world live in a Jewish state. But the story has not ended — new communities are growing, old ones are shrinking, and the movement of people continues. The Jewish diaspora keeps changing, as it always has, and these 15.8 million individual stories continue to be written.

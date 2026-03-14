@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import { getTranslations } from "next-intl/server";
@@ -113,6 +114,14 @@ export async function generateMetadata({
   };
 }
 
+const coverImages: Record<string, string> = {
+  "israel-railways": "/images/posts/israel-railways/hero.svg",
+  "jewish-diaspora": "/images/posts/jewish-diaspora/hero.svg",
+  "dead-sea-geology": "/images/posts/dead-sea-geology/hero.svg",
+  "israeli-tech-ecosystem": "/images/posts/israeli-tech-ecosystem/hero.svg",
+  "hebrew-revival": "/images/posts/hebrew-revival/hero.svg",
+};
+
 export default async function PostPage({
   params,
 }: {
@@ -134,16 +143,32 @@ export default async function PostPage({
   const BackArrow = isRtl ? ArrowRight : ArrowLeft;
   const t = await getTranslations("post");
 
+  const coverImage = coverImages[slug];
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-24 pb-16">
+      {/* Hero cover image */}
+      {coverImage && (
+        <div className="relative w-full aspect-[21/9] min-h-[250px] max-h-[450px] mt-16">
+          <Image
+            src={coverImage}
+            alt=""
+            fill
+            priority
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+        </div>
+      )}
+
+      <main className={`flex-1 ${coverImage ? "pb-16" : "pt-24 pb-16"}`}>
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Back link */}
           <Link
             href={`/${locale}/posts`}
-            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-brand-600 transition-colors mb-8"
+            className="inline-flex items-center gap-1.5 text-sm text-text-secondary hover:text-brand-400 transition-colors mb-8"
           >
             <BackArrow className="h-4 w-4" />
             {t("back_to_posts")}

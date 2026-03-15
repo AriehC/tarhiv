@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import Image from "next/image";
 import { LogIn } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/Button";
@@ -47,7 +48,8 @@ export function Navbar() {
 
       <div className="mx-auto max-w-7xl h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <Link href={`/${locale}`} className="flex items-center gap-2 shrink-0">
+        <Link href={`/${locale}`} className="flex items-center gap-2.5 shrink-0">
+          <Image src="/icon.svg" alt="" width={32} height={32} className="rounded-lg" />
           <span className="text-2xl font-bold font-heading gradient-text">
             {tSite("name")}
           </span>

@@ -4,7 +4,6 @@ import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { HeroCard } from "@/components/home/HeroCard";
 import { FeaturedGrid } from "@/components/home/FeaturedGrid";
 import { CategoryFilter, type Category } from "@/components/home/CategoryFilter";
 import { PostCard } from "@/components/home/PostCard";
@@ -29,7 +28,6 @@ interface HomeContentProps {
 
 export function HomeContent({
   locale,
-  featuredPost,
   allPosts,
   gridPosts,
 }: HomeContentProps) {
@@ -46,17 +44,12 @@ export function HomeContent({
       <Navbar />
 
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="pt-24 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <HeroCard {...featuredPost} locale={locale} />
-        </section>
-
         {/* Featured Grid */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section className="pt-24 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <h2 className="text-2xl font-bold font-heading gradient-text inline-block mb-6">
             {t("featured")}
           </h2>
-          <FeaturedGrid posts={gridPosts.slice(0, 3)} locale={locale} />
+          <FeaturedGrid posts={allPosts.slice(0, 3)} locale={locale} />
         </section>
 
         {/* All Posts with Category Filter */}

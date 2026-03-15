@@ -3,6 +3,8 @@ import {
   addDoc,
   deleteDoc,
   doc,
+  getDoc,
+  setDoc,
   query,
   where,
   orderBy,
@@ -11,6 +13,8 @@ import {
   increment,
   serverTimestamp,
   onSnapshot,
+  arrayUnion,
+  arrayRemove,
   type Unsubscribe,
   type Timestamp,
 } from "firebase/firestore";
@@ -94,5 +98,143 @@ export function onCommentsSnapshot(
       ...doc.data(),
     })) as Comment[];
     callback(comments);
+  });
+}
+
+// ─── Post Stats (views, likes) ───
+
+const POSTS_COLLECTION = "posts";
+const USER_DATA_COLLECTION = "userData";
+
+export interface PostStats {
+  views: number;
+  likes: number;
+}
+
+export async function getPostStats(postSlug: string): Promise<PostStats> {
+  const db = getFirebaseFirestore();
+  const docSnap = await getDoc(doc(db, POSTS_COLLECTION, postSlug));
+  if (docSnap.exists()) {
+    const data = docSnap.data();
+    return { views: data.views ?? 0, likes: data.likes ?? 0 };
+  }
+  return { views: 0, likes: 0 };
+}
+
+export async function incrementPostViews(postSlug: string): Promise<void> {
+  const db = getFirebaseFirestore();
+  const ref = doc(db, POSTS_COLLECTION, postSlug);
+  const docSnap = await getDoc(ref);
+  if (docSnap.exists()) {
+    await updateDoc(ref, { views: increment(1) });
+  } else {
+    await setDoc(ref, { views: 1, likes: 0 });
+  }
+}
+
+export async function togglePostLike(
+  postSlug: string,
+  uid: string,
+): Promise<boolean> {
+  const db = getFirebaseFirestore();
+
+  // Check if user already liked
+  const userRef = doc(db, USER_DATA_COLLECTION, uid);
+  const userSnap = await getDoc(userRef);
+  const likedPosts: string[] = userSnap.exists()
+    ? userSnap.data().likedPosts ?? []
+    : [];
+
+  const alreadyLiked = likedPosts.includes(postSlug);
+  const postRef = doc(db, POSTS_COLLECTION, postSlug);
+  const postSnap = await getDoc(postRef);
+
+  if (alreadyLiked) {
+    // Unlike
+    await updateDoc(userRef, { likedPosts: arrayRemove(postSlug) });
+    if (postSnap.exists()) {
+      await updateDoc(postRef, { likes: increment(-1) });
+    }
+    return false;
+  } else {
+    // Like
+    if (userSnap.exists()) {
+      await updateDoc(userRef, { likedPosts: arrayUnion(postSlug) });
+    } else {
+      await setDoc(userRef, { likedPosts: [postSlug], viewedPosts: [] });
+    }
+    if (postSnap.exists()) {
+      await updateDoc(postRef, { likes: increment(1) });
+    } else {
+      await setDoc(postRef, { views: 0, likes: 1 });
+    }
+    return true;
+  }
+}
+
+export function onPostStatsSnapshot(
+  postSlug: string,
+  callback: (stats: PostStats) => void,
+): Unsubscribe {
+  const db = getFirebaseFirestore();
+  return onSnapshot(doc(db, POSTS_COLLECTION, postSlug), (docSnap) => {
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      callback({ views: data.views ?? 0, likes: data.likes ?? 0 });
+    } else {
+      callback({ views: 0, likes: 0 });
+    }
+  });
+}
+
+// ─── User Data (viewed posts, liked posts) ───
+
+export interface UserPostData {
+  viewedPosts: string[];
+  likedPosts: string[];
+}
+
+export async function getUserPostData(uid: string): Promise<UserPostData> {
+  const db = getFirebaseFirestore();
+  const docSnap = await getDoc(doc(db, USER_DATA_COLLECTION, uid));
+  if (docSnap.exists()) {
+    const data = docSnap.data();
+    return {
+      viewedPosts: data.viewedPosts ?? [],
+      likedPosts: data.likedPosts ?? [],
+    };
+  }
+  return { viewedPosts: [], likedPosts: [] };
+}
+
+export async function markPostAsViewed(
+  postSlug: string,
+  uid: string,
+): Promise<void> {
+  const db = getFirebaseFirestore();
+  const userRef = doc(db, USER_DATA_COLLECTION, uid);
+  const userSnap = await getDoc(userRef);
+  if (userSnap.exists()) {
+    await updateDoc(userRef, { viewedPosts: arrayUnion(postSlug) });
+  } else {
+    await setDoc(userRef, { viewedPosts: [postSlug], likedPosts: [] });
+  }
+}
+
+export function onUserPostDataSnapshot(
+  uid: string,
+  callback: (data: UserPostData) => void,
+): Unsubscribe {
+  const db = getFirebaseFirestore();
+  return onSnapshot(doc(db, USER_DATA_COLLECTION, uid), (docSnap) => {
+    if (docSnap.exists()) {
+      const data = docSnap.data();
+      callback({
+        viewedPosts: data.viewedPosts ?? [],
+        likedPosts: data.likedPosts ?? [],
+      });
+    } else {
+      callback({ viewedPosts: [], likedPosts: [] });
+    }
   });
 }

@@ -91,7 +91,9 @@ export async function generateMetadata() {
 
 export default async function PostsPage() {
   const locale = await getLocale();
-  const posts = getMockPosts(locale);
+  const posts = getMockPosts(locale).sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 
   return (
     <div className="min-h-screen flex flex-col">

@@ -126,7 +126,9 @@ const getMockPosts = (locale: string) => [
 
 export default async function HomePage() {
   const locale = await getLocale();
-  const posts = getMockPosts(locale);
+  const posts = getMockPosts(locale).sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
 
   return (
     <HomeContent

@@ -76,6 +76,24 @@ const postComponents: Record<string, Record<string, React.ComponentType>> = {
       { loading: MDXLoading },
     ),
   },
+  "coffee-culture": {
+    he: dynamic(
+      () => import("@/../content/posts/coffee-culture/index.he.mdx"),
+      { loading: MDXLoading },
+    ),
+  },
+  "endangered-languages": {
+    he: dynamic(
+      () => import("@/../content/posts/endangered-languages/index.he.mdx"),
+      { loading: MDXLoading },
+    ),
+  },
+  "israeli-cuisine": {
+    he: dynamic(
+      () => import("@/../content/posts/israeli-cuisine/index.he.mdx"),
+      { loading: MDXLoading },
+    ),
+  },
 };
 
 interface PostMeta {
@@ -136,6 +154,36 @@ const postMeta: Record<string, PostMeta> = {
     category: "culture",
     date: "2026-02-28",
     readingTime: 11,
+  },
+  "coffee-culture": {
+    title: {
+      he: "קפה: הנוזל השחור ששולט בעולם",
+      en: "Coffee: The Black Liquid That Rules the World",
+    },
+    coverImage: "/images/posts/coffee-culture/hero.svg",
+    category: "culture",
+    date: "2026-03-16",
+    readingTime: 14,
+  },
+  "endangered-languages": {
+    title: {
+      he: "שפות בסכנת הכחדה: 3,000 קולות שנעלמים",
+      en: "Endangered Languages: 3,000 Vanishing Voices",
+    },
+    coverImage: "/images/posts/endangered-languages/hero.svg",
+    category: "culture",
+    date: "2026-03-16",
+    readingTime: 15,
+  },
+  "israeli-cuisine": {
+    title: {
+      he: "האוכל הישראלי: מהפלאפל של הרחוב עד שולחנות העולם",
+      en: "Israeli Cuisine: From Street Falafel to World Tables",
+    },
+    coverImage: "/images/posts/israeli-cuisine/hero.svg",
+    category: "culture",
+    date: "2026-03-16",
+    readingTime: 13,
   },
 };
 

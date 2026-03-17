@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <!-- Subtle purple glow behind the cup -->
+    <radialGradient id="cup-glow" cx="0.5" cy="0.5" r="0.4">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.15"/>
+      <stop offset="60%" stop-color="#a855f7" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Coffee surface gradient (dark brown center) -->
+    <radialGradient id="coffee-surface" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1a0a02" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#0f0604" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#0a0305" stop-opacity="0.5"/>
+    </radialGradient>
+
+    <!-- Neon glow filter (subtle) -->
+    <filter id="neon">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Softer glow for steam -->
+    <filter id="steam-blur">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Solid dark background -->
+  <rect width="1200" height="600" fill="#050a15"/>
+
+  <!-- Purple ambient glow behind the cup -->
+  <ellipse cx="600" cy="300" rx="380" ry="340" fill="url(#cup-glow)"/>
+
+  <!-- ==================== -->
+  <!-- THE CUP (bird's eye) -->
+  <!-- ==================== -->
+
+  <!-- Saucer (outermost ring) -->
+  <circle cx="600" cy="300" r="195" fill="none" stroke="#06b6d4" stroke-width="0.6" opacity="0.15"/>
+  <circle cx="600" cy="300" r="185" fill="none" stroke="#06b6d4" stroke-width="0.3" opacity="0.08"/>
+
+  <!-- Cup outer rim - the main cyan ring with neon glow -->
+  <circle cx="600" cy="300" r="155" fill="none" stroke="#06b6d4" stroke-width="2.5" opacity="0.7" filter="url(#neon)"/>
+
+  <!-- Cup rim highlight (thin bright inner edge) -->
+  <circle cx="600" cy="300" r="150" fill="none" stroke="#06b6d4" stroke-width="0.8" opacity="0.35"/>
+
+  <!-- Cup interior shadow ring -->
+  <circle cx="600" cy="300" r="143" fill="none" stroke="#06b6d4" stroke-width="0.4" opacity="0.12"/>
+
+  <!-- Coffee surface (dark fill) -->
+  <circle cx="600" cy="300" r="140" fill="url(#coffee-surface)"/>
+
+  <!-- ======================== -->
+  <!-- LATTE ART / SWIRL RINGS -->
+  <!-- ======================== -->
+
+  <!-- Concentric cream rings (like ripples from pouring) -->
+  <circle cx="600" cy="300" r="120" fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.25"/>
+  <circle cx="600" cy="300" r="100" fill="none" stroke="#a855f7" stroke-width="1.0" opacity="0.20"/>
+  <circle cx="600" cy="300" r="78" fill="none" stroke="#a855f7" stroke-width="0.8" opacity="0.18"/>
+  <circle cx="600" cy="300" r="55" fill="none" stroke="#a855f7" stroke-width="0.7" opacity="0.15"/>
+  <circle cx="600" cy="300" r="34" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.12"/>
+  <circle cx="600" cy="300" r="16" fill="none" stroke="#a855f7" stroke-width="0.4" opacity="0.10"/>
+
+  <!-- Latte art swirl: a rosetta-like pattern -->
+  <!-- Central leaf shape -->
+  <path d="M600,260 Q615,280 600,300 Q585,280 600,260" fill="none" stroke="#c084fc" stroke-width="0.8" opacity="0.22"/>
+  <path d="M600,340 Q585,320 600,300 Q615,320 600,340" fill="none" stroke="#c084fc" stroke-width="0.8" opacity="0.22"/>
+
+  <!-- Swirling S-curves across the coffee surface -->
+  <path d="M520,270 Q560,285 600,280 Q640,275 680,290" fill="none" stroke="#a855f7" stroke-width="0.7" opacity="0.18"/>
+  <path d="M520,310 Q560,325 600,320 Q640,315 680,330" fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.15"/>
+  <path d="M530,290 Q565,300 600,298 Q635,296 670,305" fill="none" stroke="#c084fc" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- Spiral from center outward -->
+  <path d="M600,300 Q610,290 615,300 Q620,315 605,320 Q585,325 580,305 Q575,280 600,272 Q630,265 640,300 Q645,340 605,348" fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.16"/>
+
+  <!-- Delicate leaf veins radiating from center -->
+  <path d="M600,300 Q590,275 575,258" fill="none" stroke="#c084fc" stroke-width="0.4" opacity="0.12"/>
+  <path d="M600,300 Q610,275 625,258" fill="none" stroke="#c084fc" stroke-width="0.4" opacity="0.12"/>
+  <path d="M600,300 Q590,325 575,342" fill="none" stroke="#c084fc" stroke-width="0.4" opacity="0.12"/>
+  <path d="M600,300 Q610,325 625,342" fill="none" stroke="#c084fc" stroke-width="0.4" opacity="0.12"/>
+  <path d="M600,300 Q575,295 560,290" fill="none" stroke="#c084fc" stroke-width="0.3" opacity="0.10"/>
+  <path d="M600,300 Q625,295 640,290" fill="none" stroke="#c084fc" stroke-width="0.3" opacity="0.10"/>
+  <path d="M600,300 Q575,305 560,310" fill="none" stroke="#c084fc" stroke-width="0.3" opacity="0.10"/>
+  <path d="M600,300 Q625,305 640,310" fill="none" stroke="#c084fc" stroke-width="0.3" opacity="0.10"/>
+
+  <!-- ==================== -->
+  <!-- STEAM WISPS          -->
+  <!-- ==================== -->
+  <g filter="url(#steam-blur)" fill="none" stroke-linecap="round">
+    <!-- Steam 1 (left of center) -->
+    <path d="M575,230 Q565,200 578,170 Q590,140 572,108" stroke="#06b6d4" stroke-width="1.2" opacity="0.18"/>
+
+    <!-- Steam 2 (center) -->
+    <path d="M600,225 Q612,190 598,155 Q585,120 602,85" stroke="#a855f7" stroke-width="1.5" opacity="0.15"/>
+
+    <!-- Steam 3 (right of center) -->
+    <path d="M625,228 Q638,195 622,162 Q608,130 628,100" stroke="#06b6d4" stroke-width="1.0" opacity="0.14"/>
+
+    <!-- Steam 4 (far right, shorter) -->
+    <path d="M645,240 Q655,215 643,188 Q632,162 648,138" stroke="#a855f7" stroke-width="0.8" opacity="0.10"/>
+  </g>
+
+  <!-- ==================== -->
+  <!-- COFFEE BEANS         -->
+  <!-- ==================== -->
+  <g fill="none">
+    <!-- Bean 1 - upper left, large, near cup -->
+    <g transform="translate(350, 180) rotate(-35)">
+      <ellipse rx="22" ry="13" stroke="#06b6d4" stroke-width="1.2" opacity="0.35"/>
+      <path d="M0,-12 Q3,0 0,12" stroke="#06b6d4" stroke-width="0.8" opacity="0.25"/>
+    </g>
+
+    <!-- Bean 2 - left side, medium -->
+    <g transform="translate(260, 350) rotate(20)">
+      <ellipse rx="18" ry="11" stroke="#a855f7" stroke-width="1.1" opacity="0.30"/>
+      <path d="M0,-10 Q-2,0 0,10" stroke="#a855f7" stroke-width="0.7" opacity="0.22"/>
+    </g>
+
+    <!-- Bean 3 - upper right, large -->
+    <g transform="translate(880, 160) rotate(-50)">
+      <ellipse rx="20" ry="12" stroke="#06b6d4" stroke-width="1.2" opacity="0.32"/>
+      <path d="M0,-11 Q2,0 0,11" stroke="#06b6d4" stroke-width="0.8" opacity="0.24"/>
+    </g>
+
+    <!-- Bean 4 - right side, medium -->
+    <g transform="translate(920, 380) rotate(15)">
+      <ellipse rx="17" ry="10" stroke="#a855f7" stroke-width="1.0" opacity="0.28"/>
+      <path d="M0,-9 Q-2,0 0,9" stroke="#a855f7" stroke-width="0.7" opacity="0.20"/>
+    </g>
+
+    <!-- Bean 5 - bottom left -->
+    <g transform="translate(310, 480) rotate(-15)">
+      <ellipse rx="19" ry="11" stroke="#06b6d4" stroke-width="1.1" opacity="0.30"/>
+      <path d="M0,-10 Q2,0 0,10" stroke="#06b6d4" stroke-width="0.7" opacity="0.22"/>
+    </g>
+
+    <!-- Bean 6 - bottom right, smaller -->
+    <g transform="translate(870, 470) rotate(40)">
+      <ellipse rx="14" ry="8" stroke="#a855f7" stroke-width="0.9" opacity="0.24"/>
+      <path d="M0,-7 Q-1.5,0 0,7" stroke="#a855f7" stroke-width="0.6" opacity="0.18"/>
+    </g>
+
+    <!-- Bean 7 - far upper left, small (distance) -->
+    <g transform="translate(140, 110) rotate(-60)">
+      <ellipse rx="11" ry="7" stroke="#a855f7" stroke-width="0.8" opacity="0.18"/>
+      <path d="M0,-6 Q1.5,0 0,6" stroke="#a855f7" stroke-width="0.5" opacity="0.12"/>
+    </g>
+
+    <!-- Bean 8 - far right, small -->
+    <g transform="translate(1060, 250) rotate(25)">
+      <ellipse rx="12" ry="7" stroke="#06b6d4" stroke-width="0.8" opacity="0.20"/>
+      <path d="M0,-6 Q-1.5,0 0,6" stroke="#06b6d4" stroke-width="0.5" opacity="0.14"/>
+    </g>
+
+    <!-- Bean 9 - bottom center-left, medium -->
+    <g transform="translate(480, 520) rotate(-8)">
+      <ellipse rx="16" ry="9" stroke="#06b6d4" stroke-width="1.0" opacity="0.25"/>
+      <path d="M0,-8 Q2,0 0,8" stroke="#06b6d4" stroke-width="0.6" opacity="0.18"/>
+    </g>
+
+    <!-- Bean 10 - top center-right -->
+    <g transform="translate(750, 95) rotate(55)">
+      <ellipse rx="13" ry="8" stroke="#a855f7" stroke-width="0.9" opacity="0.22"/>
+      <path d="M0,-7 Q-1,0 0,7" stroke="#a855f7" stroke-width="0.5" opacity="0.15"/>
+    </g>
+  </g>
+</svg>

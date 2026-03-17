@@ -1,0 +1,225 @@
+כל בוקר, בכל רחוב, בכל עיר על פני כדור הארץ, 2.25 מיליארד כוסות קפה נשפכות, נלגמות, ונשתות. מהפינג'אן הטורקי בשוק מחנה יהודה ועד האספרסו הנאפוליטני, מהקפה המסונן בטוקיו ועד הקולד ברו בברוקלין — הנוזל השחור הזה הוא הסחורה השנייה הנסחרת בעולם, אחרי הנפט. תעשייה גלובלית בשווי 495 מיליארד דולר, שמתחילה בפולים קטנים שגדלים על עצים בחגורה הטרופית, ומסתיימת בריטואל היומי הכי אוניברסלי שקיים.
+
+export const keyStats = [
+  { value: "2.25B", label: "כוסות ביום בעולם", icon: "Coffee" },
+  { value: "$495B", label: "שווי התעשייה", icon: "DollarSign" },
+  { value: "70+", label: "מדינות מגדלות", icon: "Globe" },
+  { value: "25M", label: "חקלאים בעולם", icon: "Users" },
+  { value: "12 ק\"ג", label: "צריכה שנתית בפינלנד", icon: "TrendingUp" },
+  { value: "1475", label: "שנת בית הקפה הראשון", icon: "Clock" },
+];
+
+<StatGrid stats={keyStats} title="הקפה העולמי במספרים" />
+
+## מאתיופיה לכל העולם: ההיסטוריה של הקפה
+
+לפי האגדה, רועה עיזים אתיופי בשם קאלדי גילה את הקפה כשהבחין שהעיזים שלו הופכות לאנרגטיות במיוחד אחרי שאכלו פירות אדומים מעץ מסוים. בין אם הסיפור אמיתי ובין אם לא, אתיופיה היא ללא ספק מולדת הקפה — ומשם הוא עבר דרך תימן לאימפריה העות'מאנית, ומשם לכל העולם.
+
+export const consumptionGrowthData = [
+  { year: "1600", consumption: 0.1 },
+  { year: "1700", consumption: 0.5 },
+  { year: "1800", consumption: 5 },
+  { year: "1850", consumption: 15 },
+  { year: "1900", consumption: 50 },
+  { year: "1950", consumption: 150 },
+  { year: "1970", consumption: 300 },
+  { year: "1990", consumption: 550 },
+  { year: "2000", consumption: 800 },
+  { year: "2010", consumption: 1200 },
+  { year: "2020", consumption: 1800 },
+  { year: "2025", consumption: 2250 },
+];
+
+<DataChart type="area" data={consumptionGrowthData} xKey="year" yKeys={[{ key: "consumption", label: "צריכה יומית (מיליוני כוסות)", color: "#a855f7" }]} title="צריכת הקפה העולמית לאורך ההיסטוריה (מיליוני כוסות ביום)" />
+
+<InfoCard type="fact" title="בתי הקפה הראשונים: מקום מפגש ומהפכה">
+בית הקפה הראשון בעולם נפתח בקונסטנטינופול ב-1475. בתי הקפה העות'מאניים, שנקראו "קהוה-חאנה", הפכו למרכזי תרבות, פוליטיקה ושיח ציבורי. באנגליה של המאה ה-17, בתי הקפה כונו "אוניברסיטאות הפני" — כי בעד פני אחד יכולת לשבת, לשתות קפה ולשוחח עם מלומדים. חברת ביטוח Lloyd's of London? היא התחילה כבית קפה.
+</InfoCard>
+
+## ציר הזמן: מפולים לתרבות
+
+export const coffeeTimeline = [
+  { date: "המאה ה-9", title: "הגילוי באתיופיה", description: "לפי האגדה, הרועה קאלדי מגלה את השפעת פולי הקפה על העיזים שלו. ההכרה הראשונה בצמח הקפה.", highlight: true },
+  { date: "1475", title: "בית הקפה הראשון", description: "בקונסטנטינופול (איסטנבול) נפתח בית הקפה הראשון בעולם. הקפה הופך מסחורה פרטית לחוויה חברתית." },
+  { date: "1600", title: "הקפה מגיע לאירופה", description: "סוחרים ונציאניים מביאים את הקפה לאירופה. האפיפיור קלמנט השמיני מברך את המשקה ו'מטביל' אותו לנצרות.", highlight: true },
+  { date: "1773", title: "מסיבת התה של בוסטון", description: "לאחר מחאת התה, הקפה הופך למשקה הלאומי של אמריקה. שתיית תה נחשבת לא-פטריוטית." },
+  { date: "1884", title: "מכונת האספרסו", description: "אנג'לו מוריונדו רושם פטנט על מכונת הקפה הראשונה שמשתמשת בלחץ קיטור. לידתו של האספרסו.", highlight: true },
+  { date: "1971", title: "סטארבקס נפתח", description: "החנות הראשונה של סטארבקס נפתחת בסיאטל. תחילתו של 'הגל השני' — רשתות קפה גלובליות.", highlight: true },
+  { date: "2002", title: "הגל השלישי", description: "תנועת הקפה האיכותי צומחת. קפה single origin, קלייה בהירה, ושיטות חליטה מדויקות הופכים למיינסטרים." },
+  { date: "2020", title: "קפה בבית", description: "מגפת הקורונה מאיצה את תרבות הקפה הביתי. מכירות מכונות קפה ביתיות זינקו ב-30%. cold brew ו-nitro coffee כובשים את השוק." },
+];
+
+<Timeline events={coffeeTimeline} title="מסע הקפה: מאתיופיה לכל העולם" color="#a855f7" />
+
+## מי שותה הכי הרבה? מפת הצריכה העולמית
+
+אם חשבתם שאיטליה או ארה"ב מובילות בצריכת קפה, טעיתם בגדול. הסקנדינבים הם אלופי הקפה בעולם, עם פינלנד בראש — 12 קילוגרם לנפש בשנה, כמעט פי שלושה מאיטליה. זה בערך 4-5 כוסות ביום לכל פיני בוגר.
+
+export const consumptionMapData = [
+  { id: "FIN", name: "פינלנד", value: 12 },
+  { id: "NOR", name: "נורווגיה", value: 9.9 },
+  { id: "ISL", name: "איסלנד", value: 9 },
+  { id: "DNK", name: "דנמרק", value: 8.7 },
+  { id: "NLD", name: "הולנד", value: 8.4 },
+  { id: "SWE", name: "שוודיה", value: 7.6 },
+  { id: "CHE", name: "שווייץ", value: 7.4 },
+  { id: "BEL", name: "בלגיה", value: 6.8 },
+  { id: "CAN", name: "קנדה", value: 6.5 },
+  { id: "BRA", name: "ברזיל", value: 6.2 },
+  { id: "DEU", name: "גרמניה", value: 5.5 },
+  { id: "AUT", name: "אוסטריה", value: 5.5 },
+  { id: "ITA", name: "איטליה", value: 4.7 },
+  { id: "ETH", name: "אתיופיה", value: 4.5 },
+  { id: "FRA", name: "צרפת", value: 4.1 },
+  { id: "USA", name: "ארה\"ב", value: 3.5 },
+  { id: "JPN", name: "יפן", value: 3.3 },
+  { id: "GBR", name: "בריטניה", value: 2.8 },
+  { id: "ISR", name: "ישראל", value: 4.8 },
+  { id: "TUR", name: "טורקיה", value: 1.2 },
+  { id: "AUS", name: "אוסטרליה", value: 3.0 },
+  { id: "ESP", name: "ספרד", value: 3.8 },
+  { id: "KOR", name: "דרום קוריאה", value: 2.7 },
+  { id: "COL", name: "קולומביה", value: 2.0 },
+  { id: "IND", name: "הודו", value: 0.1 },
+  { id: "CHN", name: "סין", value: 0.4 },
+];
+
+<InteractiveMap mapType="world" data={consumptionMapData} title={'צריכת קפה לנפש (ק"ג לשנה)'} colorScale={["#164e63", "#06b6d4"]} showLegend />
+
+export const topConsumersData = [
+  { country: "פינלנד", perCapita: 12 },
+  { country: "נורווגיה", perCapita: 9.9 },
+  { country: "איסלנד", perCapita: 9 },
+  { country: "דנמרק", perCapita: 8.7 },
+  { country: "הולנד", perCapita: 8.4 },
+  { country: "שוודיה", perCapita: 7.6 },
+  { country: "שווייץ", perCapita: 7.4 },
+  { country: "בלגיה", perCapita: 6.8 },
+  { country: "קנדה", perCapita: 6.5 },
+  { country: "ברזיל", perCapita: 6.2 },
+];
+
+<DataChart type="bar" data={topConsumersData} xKey="country" yKeys={[{ key: "perCapita", label: 'ק"ג לנפש לשנה', color: "#06b6d4" }]} title="עשר המדינות המובילות בצריכת קפה לנפש" />
+
+<InfoCard type="info" title="למה דווקא הסקנדינבים?">
+השילוב של חורפים ארוכים וחשוכים, תרבות עבודה שדורשת ערנות, ומסורת חברתית של "פיקה" (הפסקת קפה שוודית) או "קהוויטאופה" (הפסקת קפה פינית) — הפכו את הקפה לחלק בלתי נפרד מהחיים הסקנדינביים. בפינלנד, לעובדים יש זכות חוקית לשתי הפסקות קפה ביום העבודה.
+</InfoCard>
+
+## מאיפה מגיע הקפה? מפת הייצור
+
+בזמן שהסקנדינבים שותים הכי הרבה, הברזילאים מגדלים הכי הרבה. ברזיל היא מעצמת הקפה בלי עוררין — היא מייצרת כשליש מכל הקפה בעולם, כ-3.8 מיליון טון בשנה. אחריה וייטנאם, שעלתה באופן מטאורי ממגדלת קפה שולית ליצואנית מספר שתיים בעולם.
+
+export const productionData = [
+  { country: "ברזיל", production: 3800 },
+  { country: "וייטנאם", production: 1850 },
+  { country: "קולומביה", production: 860 },
+  { country: "אינדונזיה", production: 780 },
+  { country: "אתיופיה", production: 500 },
+  { country: "הונדורס", production: 380 },
+  { country: "הודו", production: 350 },
+  { country: "אוגנדה", production: 340 },
+  { country: "מקסיקו", production: 270 },
+  { country: "גואטמלה", production: 250 },
+];
+
+<DataChart type="bar" data={productionData} xKey="country" yKeys={[{ key: "production", label: "ייצור (אלפי טון)", color: "#a855f7" }]} title="עשר המדינות המובילות בייצור קפה (אלפי טון)" />
+
+## השוואה: ארבע שיטות הכנה
+
+לכל תרבות שיטת הכנה משלה, וכל שיטה מפיקה משקה שונה לחלוטין. הטמפרטורה, הלחץ, זמן החליטה, וגודל הטחינה — כולם משפיעים על הטעם, העוצמה, והחוויה.
+
+export const comparisonColumns = [
+  { key: "espresso", label: "אספרסו" },
+  { key: "filter", label: "פילטר" },
+  { key: "turkish", label: "טורקי" },
+  { key: "coldbrew", label: "קולד ברו" },
+];
+
+export const comparisonRows = [
+  { label: "טמפרטורה", values: { espresso: "90-96°C", filter: "92-96°C", turkish: "100°C (רתיחה)", coldbrew: "קר (2-20°C)" }, type: "text" },
+  { label: "זמן הכנה", values: { espresso: "25-30 שנ׳", filter: "3-5 דק׳", turkish: "2-3 דק׳", coldbrew: "12-24 שעות" }, type: "text" },
+  { label: "קפאין (מ\"ג לכוס)", values: { espresso: "63", filter: "95", turkish: "50", coldbrew: "200" }, type: "number" },
+  { label: "מוצא", values: { espresso: "איטליה", filter: "גרמניה", turkish: "עות'מאנית", coldbrew: "יפן/ארה\"ב" }, type: "text" },
+  { label: "טחינה", values: { espresso: "עדינה מאוד", filter: "בינונית", turkish: "אבקה", coldbrew: "גסה" }, type: "text" },
+];
+
+<ComparisonTable columns={comparisonColumns} rows={comparisonRows} title="השוואת שיטות הכנת קפה" highlightColumn="espresso" />
+
+<InfoCard type="tip" title="הסוד של קולד ברו">
+קולד ברו מכיל כמעט פי שלושה קפאין מאספרסו רגיל — 200 מ"ג לכוס לעומת 63 מ"ג. הסיבה: החליטה הארוכה (12-24 שעות) מחלצת יותר קפאין מהפולים. בנוסף, היעדר החום מונע שחרור חומצות מרות, מה שנותן לקולד ברו את הטעם החלק והמתוק שלו.
+</InfoCard>
+
+## הכלכלה של הקפה: מהחקלאי לכוס
+
+תעשיית הקפה מעסיקה כ-25 מיליון חקלאים ברחבי העולם, רובם במדינות מתפתחות. הפרדוקס הגדול של הקפה: מי שמגדל אותו מרוויח הכי פחות, ומי ששותה אותו משלם הכי הרבה.
+
+export const priceBreakdownData = [
+  { segment: "חקלאי", percentage: 10 },
+  { segment: "ייצוא ועיבוד", percentage: 15 },
+  { segment: "קלייה ואריזה", percentage: 20 },
+  { segment: "הפצה וקמעונאות", percentage: 25 },
+  { segment: "בית הקפה (רווח)", percentage: 30 },
+];
+
+<DataChart type="bar" data={priceBreakdownData} xKey="segment" yKeys={[{ key: "percentage", label: "אחוז ממחיר הכוס (%)", color: "#06b6d4" }]} title="פילוח מחיר כוס קפה: מי מרוויח כמה?" />
+
+export const economicStats = [
+  { value: "$25B", label: "שוק הקפה ההוגן", icon: "Heart" },
+  { value: "25M", label: "חקלאים בעולם", icon: "Sprout" },
+  { value: "10%", label: "חלק החקלאי מהמחיר", icon: "Percent" },
+  { value: "$5.50", label: "מחיר ממוצע לכוס בארה\"ב", icon: "DollarSign" },
+  { value: "120M", label: "שקי קפה בשנה", icon: "Package" },
+  { value: "44%", label: "גידול בביקוש עד 2050", icon: "TrendingUp" },
+];
+
+<StatGrid stats={economicStats} title="הכלכלה של הקפה" />
+
+<InfoCard type="warning" title="משבר האקלים והקפה">
+עד 2050, שינויי האקלים צפויים לצמצם ב-50% את השטחים המתאימים לגידול קפה ארביקה. טמפרטורות עולות, שינויים בדפוסי גשם, ומחלות חדשות מאיימים על פרנסתם של מיליוני חקלאים. ברזיל כבר חווה בצורות חמורות שהפחיתו את התנובה ב-30% בשנים מסוימות. המהפכה הבאה בעולם הקפה תהיה מהפכת ההישרדות.
+</InfoCard>
+
+## קפה בישראל: מ"בוץ" ל"הפוך"
+
+תרבות הקפה הישראלית היא סיפור של מיזוג תרבויות. העולים ממדינות ערב הביאו את הקפה הטורקי ("בוץ" בסלנג), העולים מאירופה הביאו את הפילטר, ותרבות הקפה האיטלקית חדרה בשנות ה-90 — וכך נולד "ההפוך", המשקה הכי ישראלי שיש: אספרסו כפול עם הרבה חלב מוקצף, שמוגש בכוס גדולה.
+
+export const israelCoffeeData = [
+  { year: "1990", cafes: 200, consumption: 2.5 },
+  { year: "1995", cafes: 800, consumption: 3.0 },
+  { year: "2000", cafes: 2500, consumption: 3.5 },
+  { year: "2005", cafes: 4000, consumption: 3.8 },
+  { year: "2010", cafes: 5500, consumption: 4.0 },
+  { year: "2015", cafes: 7000, consumption: 4.3 },
+  { year: "2020", cafes: 8000, consumption: 4.5 },
+  { year: "2025", cafes: 9500, consumption: 4.8 },
+];
+
+<DataChart type="line" data={israelCoffeeData} xKey="year" yKeys={[{ key: "cafes", label: "מספר בתי קפה", color: "#06b6d4" }, { key: "consumption", label: 'צריכה לנפש (ק"ג)', color: "#a855f7" }]} title="מהפכת הקפה בישראל: בתי קפה וצריכה לנפש" />
+
+<InfoCard type="info" title="'הפוך' — ההמצאה הישראלית">
+ה"הפוך" הישראלי הוא למעשה גרסה ייחודית של קפה לאטה — אבל עם זהות משלו. השם "הפוך" בא מכך שסדר ההכנה הפוך: קודם שופכים את החלב המוקצף ואז מוסיפים מעל את האספרסו. בישראל, "הפוך" הוא כל כך פופולרי שהוא מהווה כ-60% מכל ההזמנות בבתי קפה. תיירים אוהבים לגלות שאפשר לשבת בבית קפה בתל אביב שעות ארוכות מבלי שמישהו ילחץ אותם לפנות את השולחן.
+</InfoCard>
+
+## הקפה והבריאות: מה אומר המדע?
+
+במשך עשרות שנים, הקפה נתפס כמשקה לא בריא. אבל מחקרים עדכניים הפכו את התמונה: צריכה מתונה של קפה (3-5 כוסות ביום) קשורה דווקא ליתרונות בריאותיים משמעותיים.
+
+export const healthData = [
+  { effect: "סוכרת סוג 2", risk: -25 },
+  { effect: "פרקינסון", risk: -30 },
+  { effect: "אלצהיימר", risk: -20 },
+  { effect: "שחמת הכבד", risk: -40 },
+  { effect: "דיכאון", risk: -15 },
+  { effect: "סרטן הכבד", risk: -35 },
+];
+
+<DataChart type="bar" data={healthData} xKey="effect" yKeys={[{ key: "risk", label: "שינוי בסיכון (%)", color: "#06b6d4" }]} title="השפעת צריכת קפה מתונה (3-5 כוסות/יום) על סיכון למחלות" />
+
+<ScrollReveal>
+
+<QuoteBlock author="טלירנד" role="מדינאי צרפתי, המאה ה-18">
+קפה טוב צריך להיות שחור כלילה, חם כגיהנום, וטהור כמלאך.
+</QuoteBlock>
+
+</ScrollReveal>
+
+מ-2.25 מיליארד כוסות ביום ועד 25 מיליון חקלאים שמתפרנסים ממנו, מפינלנד הקפואה ועד אתיופיה הטרופית — הקפה הוא הרבה יותר ממשקה. הוא ריטואל בוקר, שפה אוניברסלית, מנוע כלכלי, ונקודת מפגש אנושית. בפעם הבאה שתרימו את הכוס, תחשבו על המסע המופלא שהפולים האלה עברו — מענף עץ בהרי אתיופיה, דרך נמלים ומפעלי קלייה, ועד לריח הזה שאין כמוהו, שאומר: הבוקר מתחיל עכשיו.

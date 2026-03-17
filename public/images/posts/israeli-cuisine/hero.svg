@@ -1,0 +1,382 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <radialGradient id="table-surface" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1a1028" stop-opacity="1"/>
+      <stop offset="60%" stop-color="#10091a" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#080510" stop-opacity="1"/>
+    </radialGradient>
+    <radialGradient id="warm-glow" cx="0.5" cy="0.5" r="0.45">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.12"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="plate-fill" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.01"/>
+    </radialGradient>
+    <radialGradient id="bowl-fill-cyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.02"/>
+    </radialGradient>
+    <radialGradient id="bowl-fill-purple" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0.02"/>
+    </radialGradient>
+    <filter id="neon">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="1200" height="600" fill="#080510"/>
+
+  <!-- Table surface - subtle round lighter area -->
+  <ellipse cx="600" cy="300" rx="520" ry="280" fill="url(#table-surface)"/>
+
+  <!-- Warm purple ambient glow -->
+  <ellipse cx="600" cy="300" rx="450" ry="260" fill="url(#warm-glow)"/>
+
+  <!-- ======================================== -->
+  <!-- CENTRAL LARGE PLATE (hummus plate)       -->
+  <!-- ======================================== -->
+  <g transform="translate(600, 290)">
+    <!-- Plate outer glow -->
+    <circle r="115" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.08"/>
+    <!-- Plate outer rim -->
+    <circle r="105" fill="url(#plate-fill)" stroke="#06b6d4" stroke-width="2" opacity="0.55" filter="url(#neon)"/>
+    <!-- Plate inner rim -->
+    <circle r="92" fill="none" stroke="#06b6d4" stroke-width="0.8" opacity="0.3"/>
+    <!-- Hummus surface - concentric swirl rings -->
+    <circle r="75" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.15"/>
+    <circle r="58" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.12"/>
+    <circle r="40" fill="none" stroke="#a855f7" stroke-width="0.4" opacity="0.1"/>
+    <!-- Hummus well in center (olive oil pool) -->
+    <circle r="18" fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.2"/>
+    <circle r="12" fill="#a855f7" opacity="0.06"/>
+    <!-- Chickpeas on top of hummus -->
+    <circle cx="-30" cy="-20" r="4" fill="none" stroke="#06b6d4" stroke-width="0.7" opacity="0.25"/>
+    <circle cx="-22" cy="-28" r="3.5" fill="none" stroke="#06b6d4" stroke-width="0.7" opacity="0.22"/>
+    <circle cx="-35" cy="-12" r="3" fill="none" stroke="#06b6d4" stroke-width="0.7" opacity="0.2"/>
+    <circle cx="25" cy="22" r="4" fill="none" stroke="#06b6d4" stroke-width="0.7" opacity="0.22"/>
+    <circle cx="32" cy="14" r="3.5" fill="none" stroke="#06b6d4" stroke-width="0.7" opacity="0.2"/>
+    <!-- Paprika sprinkle marks -->
+    <circle cx="45" cy="-10" r="1" fill="#a855f7" opacity="0.18"/>
+    <circle cx="50" cy="-15" r="0.8" fill="#a855f7" opacity="0.15"/>
+    <circle cx="42" cy="-18" r="1.2" fill="#a855f7" opacity="0.12"/>
+    <circle cx="-40" cy="30" r="1" fill="#a855f7" opacity="0.15"/>
+    <circle cx="-48" cy="25" r="0.8" fill="#a855f7" opacity="0.12"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- BOWL 1 - Top left (salad bowl)           -->
+  <!-- ======================================== -->
+  <g transform="translate(380, 170)">
+    <circle r="62" fill="url(#bowl-fill-cyan)" stroke="#06b6d4" stroke-width="1.5" opacity="0.4"/>
+    <circle r="52" fill="none" stroke="#06b6d4" stroke-width="0.6" opacity="0.2"/>
+    <!-- Chopped salad pieces inside -->
+    <rect x="-20" y="-15" width="8" height="6" rx="1" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.2" transform="rotate(15, -16, -12)"/>
+    <rect x="5" y="-20" width="10" height="5" rx="1" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.18" transform="rotate(-10, 10, -17)"/>
+    <rect x="-10" y="8" width="7" height="7" rx="1" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.18" transform="rotate(30, -6, 11)"/>
+    <rect x="12" y="5" width="9" height="5" rx="1" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.15" transform="rotate(-20, 16, 7)"/>
+    <rect x="-25" y="2" width="6" height="8" rx="1" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.15"/>
+    <circle cx="20" cy="-8" r="3" fill="none" stroke="#a855f7" stroke-width="0.4" opacity="0.15"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- BOWL 2 - Top right (tahini bowl)         -->
+  <!-- ======================================== -->
+  <g transform="translate(830, 180)">
+    <circle r="50" fill="url(#bowl-fill-purple)" stroke="#a855f7" stroke-width="1.5" opacity="0.4"/>
+    <circle r="42" fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.2"/>
+    <!-- Tahini swirl inside -->
+    <path d="M-15,-10 Q0,-20 12,-5 Q20,10 5,15 Q-10,18 -15,5" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.2"/>
+    <path d="M-5,-5 Q5,-10 10,0 Q12,8 2,10" fill="none" stroke="#a855f7" stroke-width="0.4" opacity="0.15"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- BOWL 3 - Bottom left (pickles/olives)    -->
+  <!-- ======================================== -->
+  <g transform="translate(350, 410)">
+    <circle r="45" fill="url(#bowl-fill-cyan)" stroke="#06b6d4" stroke-width="1.3" opacity="0.38"/>
+    <circle r="37" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.2"/>
+    <!-- Olives inside -->
+    <ellipse cx="-8" cy="-5" rx="5" ry="4" fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.2"/>
+    <ellipse cx="8" cy="3" rx="5" ry="4" fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.18" transform="rotate(20, 8, 3)"/>
+    <ellipse cx="-3" cy="10" rx="4.5" ry="3.5" fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.15" transform="rotate(-15, -3, 10)"/>
+    <ellipse cx="12" cy="-10" rx="5" ry="3.5" fill="none" stroke="#a855f7" stroke-width="0.6" opacity="0.17" transform="rotate(30, 12, -10)"/>
+    <!-- Pimento dots -->
+    <circle cx="-8" cy="-5" r="1.5" fill="#a855f7" opacity="0.1"/>
+    <circle cx="8" cy="3" r="1.5" fill="#a855f7" opacity="0.08"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- BOWL 4 - Right side (matbucha/sauce)     -->
+  <!-- ======================================== -->
+  <g transform="translate(870, 370)">
+    <circle r="55" fill="url(#bowl-fill-purple)" stroke="#a855f7" stroke-width="1.4" opacity="0.4"/>
+    <circle r="46" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.2"/>
+    <!-- Chunky sauce texture -->
+    <circle r="30" fill="none" stroke="#a855f7" stroke-width="0.4" opacity="0.12"/>
+    <path d="M-15,-8 Q-5,-15 5,-8 Q12,0 5,8 Q-5,12 -12,5 Z" fill="#a855f7" opacity="0.05"/>
+    <circle cx="-10" cy="5" r="3" fill="none" stroke="#a855f7" stroke-width="0.4" opacity="0.12"/>
+    <circle cx="8" cy="-7" r="2.5" fill="none" stroke="#a855f7" stroke-width="0.4" opacity="0.1"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- BOWL 5 - Bottom center (hummus or labneh)-->
+  <!-- ======================================== -->
+  <g transform="translate(580, 460)">
+    <circle r="48" fill="url(#bowl-fill-cyan)" stroke="#06b6d4" stroke-width="1.3" opacity="0.35"/>
+    <circle r="40" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.2"/>
+    <!-- Smooth surface with center depression -->
+    <circle r="25" fill="none" stroke="#06b6d4" stroke-width="0.4" opacity="0.12"/>
+    <circle r="10" fill="none" stroke="#06b6d4" stroke-width="0.3" opacity="0.1"/>
+    <circle r="8" fill="#06b6d4" opacity="0.04"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- PITA BREAD - overlapping pieces          -->
+  <!-- ======================================== -->
+  <!-- Pita 1 - between central plate and left bowls -->
+  <g transform="translate(460, 340)">
+    <path d="M0,-30 Q30,-32 40,-5 Q38,25 10,30 Q-15,28 -25,5 Q-28,-20 0,-30 Z"
+          fill="#a855f7" fill-opacity="0.06" stroke="#06b6d4" stroke-width="1" opacity="0.3"/>
+    <!-- Surface texture spots -->
+    <circle cx="5" cy="-10" r="2" fill="#a855f7" opacity="0.06"/>
+    <circle cx="15" cy="5" r="2.5" fill="#a855f7" opacity="0.05"/>
+    <circle cx="-5" cy="8" r="1.8" fill="#a855f7" opacity="0.05"/>
+  </g>
+
+  <!-- Pita 2 - overlapping slightly -->
+  <g transform="translate(490, 365) rotate(25)">
+    <path d="M0,-28 Q28,-30 38,-5 Q36,22 8,28 Q-14,26 -23,4 Q-26,-18 0,-28 Z"
+          fill="#a855f7" fill-opacity="0.05" stroke="#06b6d4" stroke-width="0.8" opacity="0.25"/>
+    <circle cx="8" cy="-5" r="2" fill="#a855f7" opacity="0.04"/>
+    <circle cx="-3" cy="10" r="2.2" fill="#a855f7" opacity="0.04"/>
+  </g>
+
+  <!-- Pita 3 - torn piece near top -->
+  <g transform="translate(720, 215) rotate(-15)">
+    <path d="M0,-22 Q22,-18 28,2 Q24,20 5,22 Q-12,18 -18,2 Q-16,-14 0,-22 Z"
+          fill="#a855f7" fill-opacity="0.05" stroke="#a855f7" stroke-width="0.8" opacity="0.25"/>
+    <circle cx="3" cy="0" r="1.8" fill="#a855f7" opacity="0.04"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- HERB SPRIGS scattered on the table       -->
+  <!-- ======================================== -->
+  <!-- Herb 1 - parsley sprig near top-left -->
+  <g transform="translate(280, 240) rotate(-30)" stroke="#06b6d4" stroke-width="0.8" fill="none" opacity="0.3">
+    <line x1="0" y1="0" x2="0" y2="35"/>
+    <path d="M0,5 Q-12,0 -10,-10 Q-6,-14 0,5"/>
+    <path d="M0,10 Q12,5 10,-5 Q6,-9 0,10"/>
+    <path d="M0,18 Q-10,14 -9,5 Q-5,2 0,18"/>
+  </g>
+
+  <!-- Herb 2 - cilantro near bottom-right -->
+  <g transform="translate(760, 430) rotate(20)" stroke="#06b6d4" stroke-width="0.7" fill="none" opacity="0.25">
+    <line x1="0" y1="0" x2="0" y2="30"/>
+    <path d="M0,4 Q-10,-2 -8,-10 Q-4,-13 0,4"/>
+    <path d="M0,8 Q10,3 9,-5 Q5,-8 0,8"/>
+    <path d="M0,15 Q-8,11 -7,3 Q-4,0 0,15"/>
+  </g>
+
+  <!-- Herb 3 - small sprig between bowls -->
+  <g transform="translate(680, 310) rotate(50)" stroke="#a855f7" stroke-width="0.6" fill="none" opacity="0.22">
+    <line x1="0" y1="0" x2="0" y2="22"/>
+    <path d="M0,3 Q-7,-1 -6,-7 Q-3,-9 0,3"/>
+    <path d="M0,8 Q7,5 6,-1 Q4,-3 0,8"/>
+  </g>
+
+  <!-- Herb 4 - tiny accent near plate -->
+  <g transform="translate(510, 220) rotate(-60)" stroke="#06b6d4" stroke-width="0.6" fill="none" opacity="0.2">
+    <line x1="0" y1="0" x2="0" y2="18"/>
+    <path d="M0,3 Q-6,0 -5,-5 Q-3,-7 0,3"/>
+    <path d="M0,7 Q6,4 5,-1 Q3,-3 0,7"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- LEMON SLICES (citrus cross-sections)     -->
+  <!-- ======================================== -->
+  <!-- Lemon slice 1 -->
+  <g transform="translate(240, 350)" stroke="#06b6d4" fill="none" opacity="0.35">
+    <circle r="18" stroke-width="1.2"/>
+    <circle r="14" stroke-width="0.5" opacity="0.6"/>
+    <!-- Segment lines -->
+    <line x1="0" y1="-14" x2="0" y2="14" stroke-width="0.4" opacity="0.5"/>
+    <line x1="-14" y1="0" x2="14" y2="0" stroke-width="0.4" opacity="0.5"/>
+    <line x1="-10" y1="-10" x2="10" y2="10" stroke-width="0.4" opacity="0.5"/>
+    <line x1="10" y1="-10" x2="-10" y2="10" stroke-width="0.4" opacity="0.5"/>
+    <!-- Center pip -->
+    <circle r="3" stroke-width="0.3" opacity="0.4"/>
+  </g>
+
+  <!-- Lemon slice 2 - half slice -->
+  <g transform="translate(950, 260)" stroke="#06b6d4" fill="none" opacity="0.28">
+    <circle r="15" stroke-width="1"/>
+    <circle r="11" stroke-width="0.4" opacity="0.5"/>
+    <line x1="0" y1="-11" x2="0" y2="11" stroke-width="0.4" opacity="0.5"/>
+    <line x1="-11" y1="0" x2="11" y2="0" stroke-width="0.4" opacity="0.5"/>
+    <line x1="-8" y1="-8" x2="8" y2="8" stroke-width="0.4" opacity="0.5"/>
+    <line x1="8" y1="-8" x2="-8" y2="8" stroke-width="0.4" opacity="0.5"/>
+    <circle r="2.5" stroke-width="0.3" opacity="0.4"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- OLIVE OIL DRIZZLE - flowing S-curve      -->
+  <!-- ======================================== -->
+  <path d="M530,250 Q550,230 570,248 Q590,270 610,255 Q635,238 650,260 Q665,280 690,265"
+        fill="none" stroke="#a855f7" stroke-width="1.2" opacity="0.15" stroke-linecap="round"/>
+  <!-- Second drizzle near bowl -->
+  <path d="M820,340 Q835,325 845,340 Q858,360 870,348"
+        fill="none" stroke="#a855f7" stroke-width="0.8" opacity="0.1" stroke-linecap="round"/>
+
+  <!-- ======================================== -->
+  <!-- FORK - left side of the table            -->
+  <!-- ======================================== -->
+  <g transform="translate(160, 180) rotate(15)" stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.3">
+    <!-- Handle -->
+    <line x1="0" y1="80" x2="0" y2="220"/>
+    <!-- Handle end detail -->
+    <ellipse cx="0" cy="225" rx="4" ry="8"/>
+    <!-- Neck -->
+    <line x1="0" y1="60" x2="0" y2="80"/>
+    <!-- Tines -->
+    <line x1="-9" y1="0" x2="-9" y2="60"/>
+    <line x1="-3" y1="0" x2="-3" y2="60"/>
+    <line x1="3" y1="0" x2="3" y2="60"/>
+    <line x1="9" y1="0" x2="9" y2="60"/>
+    <!-- Tine tips -->
+    <path d="M-9,0 Q-9,-4 -9,-4" stroke-linecap="round"/>
+    <path d="M-3,0 Q-3,-4 -3,-4" stroke-linecap="round"/>
+    <path d="M3,0 Q3,-4 3,-4" stroke-linecap="round"/>
+    <path d="M9,0 Q9,-4 9,-4" stroke-linecap="round"/>
+    <!-- Connection curve at base of tines -->
+    <path d="M-9,60 Q-5,68 0,68 Q5,68 9,60" stroke-width="1"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- KNIFE - right side of the table          -->
+  <!-- ======================================== -->
+  <g transform="translate(1040, 170) rotate(-12)" stroke="#06b6d4" stroke-width="1.5" fill="none" opacity="0.3">
+    <!-- Handle -->
+    <line x1="0" y1="100" x2="0" y2="230"/>
+    <!-- Handle end -->
+    <ellipse cx="0" cy="235" rx="4" ry="8"/>
+    <!-- Bolster -->
+    <rect x="-5" y="95" width="10" height="8" rx="1" stroke-width="1"/>
+    <!-- Blade -->
+    <path d="M0,95 L0,0 Q12,10 10,50 Q8,80 0,95" stroke-width="1"/>
+    <!-- Blade spine -->
+    <line x1="0" y1="0" x2="0" y2="95" stroke-width="0.5" opacity="0.3"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- SMALL SPOON near one of the bowls        -->
+  <!-- ======================================== -->
+  <g transform="translate(900, 230) rotate(40)" stroke="#a855f7" stroke-width="1" fill="none" opacity="0.22">
+    <line x1="0" y1="25" x2="0" y2="80"/>
+    <ellipse cx="0" cy="12" rx="10" ry="14"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- SCATTERED FOOD DETAILS on the table      -->
+  <!-- ======================================== -->
+
+  <!-- Loose chickpeas near hummus plate -->
+  <circle cx="505" cy="240" r="4" fill="none" stroke="#06b6d4" stroke-width="0.6" opacity="0.2"/>
+  <circle cx="515" cy="252" r="3.5" fill="none" stroke="#06b6d4" stroke-width="0.6" opacity="0.18"/>
+  <circle cx="700" cy="250" r="3" fill="none" stroke="#06b6d4" stroke-width="0.6" opacity="0.16"/>
+
+  <!-- Pomegranate seeds scattered -->
+  <circle cx="330" cy="310" r="2.5" fill="#a855f7" opacity="0.12"/>
+  <circle cx="340" cy="300" r="2" fill="#a855f7" opacity="0.1"/>
+  <circle cx="325" cy="320" r="2.2" fill="#a855f7" opacity="0.08"/>
+  <circle cx="680" cy="400" r="2.5" fill="#a855f7" opacity="0.1"/>
+  <circle cx="690" cy="410" r="2" fill="#a855f7" opacity="0.08"/>
+
+  <!-- Sesame seeds near pita -->
+  <ellipse cx="445" cy="320" rx="1.5" ry="1" fill="#06b6d4" opacity="0.12" transform="rotate(20,445,320)"/>
+  <ellipse cx="455" cy="310" rx="1.5" ry="1" fill="#06b6d4" opacity="0.1" transform="rotate(-30,455,310)"/>
+  <ellipse cx="440" cy="330" rx="1.5" ry="1" fill="#06b6d4" opacity="0.1" transform="rotate(45,440,330)"/>
+  <ellipse cx="500" cy="380" rx="1.5" ry="1" fill="#06b6d4" opacity="0.08" transform="rotate(10,500,380)"/>
+
+  <!-- Za'atar sprinkle marks -->
+  <circle cx="420" cy="185" r="0.8" fill="#a855f7" opacity="0.12"/>
+  <circle cx="425" cy="178" r="0.6" fill="#a855f7" opacity="0.1"/>
+  <circle cx="415" cy="190" r="0.7" fill="#a855f7" opacity="0.08"/>
+  <circle cx="430" cy="182" r="0.5" fill="#a855f7" opacity="0.1"/>
+
+  <!-- ======================================== -->
+  <!-- SMALL GARNISHES & TABLE DETAILS          -->
+  <!-- ======================================== -->
+
+  <!-- Cherry tomatoes near edge of central plate -->
+  <g transform="translate(710, 310)">
+    <circle r="8" fill="none" stroke="#a855f7" stroke-width="0.8" opacity="0.25"/>
+    <path d="M-2,-8 L0,-11 L2,-8" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.2"/>
+  </g>
+  <g transform="translate(725, 325)">
+    <circle r="6" fill="none" stroke="#a855f7" stroke-width="0.7" opacity="0.2"/>
+    <path d="M-1.5,-6 L0,-8 L1.5,-6" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.15"/>
+  </g>
+
+  <!-- Small chili pepper -->
+  <g transform="translate(300, 420) rotate(-25)" stroke="#a855f7" stroke-width="0.8" fill="none" opacity="0.2">
+    <path d="M0,0 Q6,-18 4,-35 Q2,-40 0,-35 Q-3,-18 0,0"/>
+    <line x1="2" y1="-37" x2="3" y2="-44"/>
+  </g>
+
+  <!-- Cucumber slices - small ovals -->
+  <g transform="translate(780, 160)">
+    <ellipse rx="10" ry="7" fill="none" stroke="#06b6d4" stroke-width="0.7" opacity="0.2"/>
+    <ellipse rx="6" ry="4" fill="none" stroke="#06b6d4" stroke-width="0.4" opacity="0.12"/>
+    <circle r="1.5" fill="none" stroke="#06b6d4" stroke-width="0.3" opacity="0.1"/>
+  </g>
+  <g transform="translate(800, 150)">
+    <ellipse rx="8" ry="5.5" fill="none" stroke="#06b6d4" stroke-width="0.6" opacity="0.18"/>
+    <ellipse rx="5" ry="3" fill="none" stroke="#06b6d4" stroke-width="0.3" opacity="0.1"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- NAPKIN / CLOTH suggestion at corner      -->
+  <!-- ======================================== -->
+  <g transform="translate(130, 430)" stroke="#a855f7" stroke-width="0.6" fill="none" opacity="0.12">
+    <path d="M0,0 L50,0 Q55,2 55,8 L55,70 Q53,75 48,75 L0,75 Q-3,72 -3,68 L-3,5 Q0,0 0,0 Z"/>
+    <!-- Fold lines -->
+    <line x1="10" y1="10" x2="45" y2="10"/>
+    <line x1="10" y1="25" x2="45" y2="25"/>
+    <line x1="10" y1="40" x2="45" y2="40"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- WATER GLASS - top right area             -->
+  <!-- ======================================== -->
+  <g transform="translate(980, 150)">
+    <circle r="20" fill="none" stroke="#06b6d4" stroke-width="1" opacity="0.2"/>
+    <circle r="17" fill="none" stroke="#06b6d4" stroke-width="0.4" opacity="0.12"/>
+    <!-- Water surface reflection -->
+    <path d="M-10,-3 Q0,3 10,-3" fill="none" stroke="#06b6d4" stroke-width="0.3" opacity="0.1"/>
+    <!-- Lemon wedge in glass -->
+    <path d="M5,-10 Q12,-5 8,2" fill="none" stroke="#06b6d4" stroke-width="0.5" opacity="0.15"/>
+  </g>
+
+  <!-- ======================================== -->
+  <!-- TABLE EDGE VIGNETTE - very subtle ring   -->
+  <!-- ======================================== -->
+  <ellipse cx="600" cy="300" rx="560" ry="290" fill="none" stroke="#a855f7" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- Scattered crumbs on the table (final organic details) -->
+  <circle cx="650" cy="440" r="1" fill="#06b6d4" opacity="0.08"/>
+  <circle cx="400" cy="260" r="0.8" fill="#06b6d4" opacity="0.07"/>
+  <circle cx="750" cy="370" r="1.2" fill="#a855f7" opacity="0.06"/>
+  <circle cx="550" cy="170" r="0.8" fill="#a855f7" opacity="0.06"/>
+  <circle cx="480" cy="430" r="1" fill="#06b6d4" opacity="0.07"/>
+  <circle cx="820" cy="280" r="0.8" fill="#a855f7" opacity="0.05"/>
+  <circle cx="310" cy="380" r="1" fill="#06b6d4" opacity="0.06"/>
+
+</svg>

@@ -4,7 +4,6 @@ import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
-import { FeaturedGrid } from "@/components/home/FeaturedGrid";
 import { CategoryFilter, type Category } from "@/components/home/CategoryFilter";
 import { PostCard } from "@/components/home/PostCard";
 
@@ -16,44 +15,32 @@ interface Post {
   date: string;
   category: string;
   readingTime: number;
-  featured?: boolean;
 }
 
 interface HomeContentProps {
   locale: string;
-  featuredPost: Post;
   allPosts: Post[];
-  gridPosts: Post[];
 }
 
 export function HomeContent({
   locale,
   allPosts,
-  gridPosts,
 }: HomeContentProps) {
   const [activeCategory, setActiveCategory] = useState<Category>("all");
   const t = useTranslations("home");
 
   const filteredPosts = useMemo(() => {
-    if (activeCategory === "all") return gridPosts;
+    if (activeCategory === "all") return allPosts;
     return allPosts.filter((p) => p.category === activeCategory);
-  }, [activeCategory, gridPosts, allPosts]);
+  }, [activeCategory, allPosts]);
 
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <main className="flex-1">
-        {/* Featured Grid */}
-        <section className="pt-24 pb-8 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <h2 className="text-2xl font-bold font-heading gradient-text inline-block mb-6">
-            {t("featured")}
-          </h2>
-          <FeaturedGrid posts={allPosts.slice(0, 3)} locale={locale} />
-        </section>
-
         {/* All Posts with Category Filter */}
-        <section className="py-8 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
             <h2 className="text-2xl font-bold font-heading gradient-text inline-block">
               {t("all_posts")}

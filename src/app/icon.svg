@@ -14,15 +14,19 @@
     </filter>
   </defs>
 
+  <!-- Dark outline for visibility on light backgrounds -->
+  <g>
+    <rect x="80" y="60" width="352" height="48" rx="24" stroke="#0a0a0a" stroke-width="6" fill="none"/>
+    <rect x="384" y="60" width="48" height="360" rx="24" stroke="#0a0a0a" stroke-width="6" fill="none"/>
+    <rect x="128" y="60" width="48" height="240" rx="24" stroke="#0a0a0a" stroke-width="6" fill="none"/>
+    <path d="M152,280 Q152,400 270,420" stroke="#0a0a0a" stroke-width="54" fill="none" stroke-linecap="round"/>
+  </g>
+
   <!-- Stylized ת letter -->
   <g filter="url(#glow)">
-    <!-- Top horizontal bar -->
     <rect x="80" y="60" width="352" height="48" rx="24" fill="url(#grad)"/>
-    <!-- Right vertical stroke -->
     <rect x="384" y="60" width="48" height="360" rx="24" fill="url(#grad)"/>
-    <!-- Left vertical stroke (shorter) -->
     <rect x="128" y="60" width="48" height="240" rx="24" fill="url(#grad)"/>
-    <!-- Bottom curve connecting left stroke -->
     <path d="M152,280 Q152,400 270,420" stroke="url(#grad)" stroke-width="48" fill="none" stroke-linecap="round"/>
   </g>
 </svg>

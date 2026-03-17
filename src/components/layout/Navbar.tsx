@@ -50,7 +50,7 @@ export function Navbar() {
         {/* Logo */}
         <Link href={`/${locale}`} className="flex items-center gap-2.5 shrink-0">
           <Image src="/icon.svg" alt="" width={32} height={32} className="rounded-lg" />
-          <span className="text-2xl font-bold font-heading gradient-text">
+          <span className="text-2xl font-bold font-heading gradient-text" style={{ WebkitTextStroke: "0.5px rgba(0,0,0,0.3)" }}>
             {tSite("name")}
           </span>
         </Link>

@@ -112,7 +112,7 @@ const postMeta: Record<string, PostMeta> = {
     },
     coverImage: "/images/posts/israel-railways/hero.svg",
     category: "infrastructure",
-    date: "2026-03-15",
+    date: "2026-03-08",
     readingTime: 12,
   },
   "jewish-diaspora": {
@@ -122,7 +122,7 @@ const postMeta: Record<string, PostMeta> = {
     },
     coverImage: "/images/posts/jewish-diaspora/hero.svg",
     category: "society",
-    date: "2026-03-20",
+    date: "2026-03-10",
     readingTime: 15,
   },
   "dead-sea-geology": {
@@ -132,7 +132,7 @@ const postMeta: Record<string, PostMeta> = {
     },
     coverImage: "/images/posts/dead-sea-geology/hero.svg",
     category: "environment",
-    date: "2026-03-10",
+    date: "2026-03-05",
     readingTime: 10,
   },
   "israeli-tech-ecosystem": {
@@ -142,7 +142,7 @@ const postMeta: Record<string, PostMeta> = {
     },
     coverImage: "/images/posts/israeli-tech-ecosystem/hero.svg",
     category: "economy",
-    date: "2026-03-05",
+    date: "2026-03-03",
     readingTime: 8,
   },
   "hebrew-revival": {
@@ -152,7 +152,7 @@ const postMeta: Record<string, PostMeta> = {
     },
     coverImage: "/images/posts/hebrew-revival/hero.svg",
     category: "culture",
-    date: "2026-02-28",
+    date: "2026-03-01",
     readingTime: 11,
   },
   "coffee-culture": {
@@ -162,7 +162,7 @@ const postMeta: Record<string, PostMeta> = {
     },
     coverImage: "/images/posts/coffee-culture/hero.svg",
     category: "culture",
-    date: "2026-03-16",
+    date: "2026-03-17",
     readingTime: 14,
   },
   "endangered-languages": {
@@ -172,7 +172,7 @@ const postMeta: Record<string, PostMeta> = {
     },
     coverImage: "/images/posts/endangered-languages/hero.svg",
     category: "culture",
-    date: "2026-03-16",
+    date: "2026-03-15",
     readingTime: 15,
   },
   "israeli-cuisine": {
@@ -182,7 +182,7 @@ const postMeta: Record<string, PostMeta> = {
     },
     coverImage: "/images/posts/israeli-cuisine/hero.svg",
     category: "culture",
-    date: "2026-03-16",
+    date: "2026-03-12",
     readingTime: 13,
   },
 };

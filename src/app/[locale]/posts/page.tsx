@@ -15,7 +15,7 @@ const getMockPosts = (locale: string) => [
         ? "סקירה מקיפה של רשת הרכבות בישראל - מהרכבת הראשונה ב-1892 ועד תוכניות ההרחבה"
         : "A comprehensive review of Israel's railway network",
     coverImage: "/images/posts/israel-railways/hero.svg",
-    date: "2026-03-15",
+    date: "2026-03-08",
     category: "infrastructure",
     readingTime: 12,
   },
@@ -30,7 +30,7 @@ const getMockPosts = (locale: string) => [
         ? "מפת הפיזור של העם היהודי ברחבי העולם - מגמות, נתונים וסיפורים"
         : "The distribution map of the Jewish people worldwide",
     coverImage: "/images/posts/jewish-diaspora/hero.svg",
-    date: "2026-03-20",
+    date: "2026-03-10",
     category: "society",
     readingTime: 15,
   },
@@ -45,7 +45,7 @@ const getMockPosts = (locale: string) => [
         ? "2.25 מיליארד כוסות ביום, תעשייה של 495 מיליארד דולר - הסיפור המלא של תרבות הקפה העולמית"
         : "2.25 billion cups a day, a $495B industry - the full story of global coffee culture",
     coverImage: "/images/posts/coffee-culture/hero.svg",
-    date: "2026-03-16",
+    date: "2026-03-17",
     category: "culture",
     readingTime: 14,
   },
@@ -60,7 +60,7 @@ const getMockPosts = (locale: string) => [
         ? "כל שבועיים מתה שפה. מ-7,000 שפות בעולם, כמחצית בסכנת הכחדה — ואיתן נעלמים עולמות שלמים"
         : "A language dies every two weeks. Of 7,000 world languages, nearly half are endangered",
     coverImage: "/images/posts/endangered-languages/hero.svg",
-    date: "2026-03-16",
+    date: "2026-03-15",
     category: "culture",
     readingTime: 15,
   },
@@ -75,7 +75,7 @@ const getMockPosts = (locale: string) => [
         ? "מהפלאפל של הרחוב ועד שולחנות העולם - איך מטבח של מהגרים הפך לתופעה גלובלית"
         : "From street falafel to world tables - how an immigrant kitchen became a global phenomenon",
     coverImage: "/images/posts/israeli-cuisine/hero.svg",
-    date: "2026-03-16",
+    date: "2026-03-12",
     category: "culture",
     readingTime: 13,
   },

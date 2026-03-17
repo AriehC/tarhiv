@@ -13,7 +13,7 @@ const getMockPosts = (locale: string) => [
         ? "סקירה מקיפה של רשת הרכבות בישראל - מהרכבת הראשונה ב-1892 ועד תוכניות ההרחבה"
         : "A comprehensive review of Israel's railway network",
     coverImage: "/images/posts/israel-railways/hero.svg",
-    date: "2026-03-15",
+    date: "2026-03-08",
     category: "infrastructure",
     readingTime: 12,
   },
@@ -28,7 +28,7 @@ const getMockPosts = (locale: string) => [
         ? "מפת הפיזור של העם היהודי ברחבי העולם - מגמות, נתונים וסיפורים"
         : "The distribution map of the Jewish people worldwide",
     coverImage: "/images/posts/jewish-diaspora/hero.svg",
-    date: "2026-03-20",
+    date: "2026-03-10",
     category: "society",
     readingTime: 15,
   },
@@ -43,7 +43,7 @@ const getMockPosts = (locale: string) => [
         ? "הגיאולוגיה, הכימיה והאקולוגיה של אחד מפלאי הטבע המרתקים בעולם"
         : "The geology, chemistry and ecology of one of nature's most fascinating wonders",
     coverImage: "/images/posts/dead-sea-geology/hero.svg",
-    date: "2026-03-10",
+    date: "2026-03-05",
     category: "environment",
     readingTime: 10,
   },
@@ -58,7 +58,7 @@ const getMockPosts = (locale: string) => [
         ? "כיצד מדינה קטנה הפכה למעצמה טכנולוגית עולמית"
         : "How a small country became a global tech powerhouse",
     coverImage: "/images/posts/israeli-tech-ecosystem/hero.svg",
-    date: "2026-03-05",
+    date: "2026-03-03",
     category: "economy",
     readingTime: 8,
   },
@@ -73,7 +73,7 @@ const getMockPosts = (locale: string) => [
         ? "הסיפור המדהים של השפה היחידה שקמה לתחייה כשפת אם"
         : "The incredible story of the only language to be revived as a mother tongue",
     coverImage: "/images/posts/hebrew-revival/hero.svg",
-    date: "2026-02-28",
+    date: "2026-03-01",
     category: "culture",
     readingTime: 11,
   },
@@ -88,7 +88,7 @@ const getMockPosts = (locale: string) => [
         ? "2.25 מיליארד כוסות ביום, תעשייה של 495 מיליארד דולר - הסיפור המלא של תרבות הקפה העולמית"
         : "2.25 billion cups a day, a $495B industry - the full story of global coffee culture",
     coverImage: "/images/posts/coffee-culture/hero.svg",
-    date: "2026-03-16",
+    date: "2026-03-17",
     category: "culture",
     readingTime: 14,
   },
@@ -103,7 +103,7 @@ const getMockPosts = (locale: string) => [
         ? "כל שבועיים מתה שפה. מ-7,000 שפות בעולם, כמחצית בסכנת הכחדה — ואיתן נעלמים עולמות שלמים"
         : "A language dies every two weeks. Of 7,000 world languages, nearly half are endangered",
     coverImage: "/images/posts/endangered-languages/hero.svg",
-    date: "2026-03-16",
+    date: "2026-03-15",
     category: "culture",
     readingTime: 15,
   },
@@ -118,7 +118,7 @@ const getMockPosts = (locale: string) => [
         ? "מהפלאפל של הרחוב ועד שולחנות העולם - איך מטבח של מהגרים הפך לתופעה גלובלית"
         : "From street falafel to world tables - how an immigrant kitchen became a global phenomenon",
     coverImage: "/images/posts/israeli-cuisine/hero.svg",
-    date: "2026-03-16",
+    date: "2026-03-12",
     category: "culture",
     readingTime: 13,
   },

@@ -199,7 +199,7 @@ const postMeta: Record<string, PostMeta> = {
     coverImage: "/images/posts/stateless-peoples/hero.svg",
     category: "society",
     date: "2026-03-18",
-    readingTime: 16,
+    readingTime: 12,
   },
 };
 

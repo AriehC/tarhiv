@@ -92,7 +92,7 @@ const getMockPosts = (locale: string) => [
     coverImage: "/images/posts/stateless-peoples/hero.svg",
     date: "2026-03-18",
     category: "society",
-    readingTime: 16,
+    readingTime: 12,
   },
 ];
 

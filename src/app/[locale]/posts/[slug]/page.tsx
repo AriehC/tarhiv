@@ -94,6 +94,12 @@ const postComponents: Record<string, Record<string, React.ComponentType>> = {
       { loading: MDXLoading },
     ),
   },
+  "stateless-peoples": {
+    he: dynamic(
+      () => import("@/../content/posts/stateless-peoples/index.he.mdx"),
+      { loading: MDXLoading },
+    ),
+  },
 };
 
 interface PostMeta {
@@ -184,6 +190,16 @@ const postMeta: Record<string, PostMeta> = {
     category: "culture",
     date: "2026-03-12",
     readingTime: 13,
+  },
+  "stateless-peoples": {
+    title: {
+      he: "350 מיליון ללא דגל: העמים שעוד ממתינים למדינה",
+      en: "350 Million Without a Flag: Peoples Still Waiting for a State",
+    },
+    coverImage: "/images/posts/stateless-peoples/hero.svg",
+    category: "society",
+    date: "2026-03-18",
+    readingTime: 16,
   },
 };
 

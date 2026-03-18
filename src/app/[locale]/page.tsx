@@ -122,6 +122,21 @@ const getMockPosts = (locale: string) => [
     category: "culture",
     readingTime: 13,
   },
+  {
+    slug: "stateless-peoples",
+    title:
+      locale === "he"
+        ? "350 מיליון ללא דגל: העמים שעוד ממתינים למדינה"
+        : "350 Million Without a Flag: Peoples Still Waiting for a State",
+    description:
+      locale === "he"
+        ? "כורדים, רומא, טיבטים, רוהינגה ועוד — סיפורם של עמים שחיים בלי מדינה משלהם, בחוויה תלת-ממדית"
+        : "Kurds, Roma, Tibetans, Rohingya and more — the story of peoples living without a state",
+    coverImage: "/images/posts/stateless-peoples/hero.svg",
+    date: "2026-03-18",
+    category: "society",
+    readingTime: 16,
+  },
 ];
 
 export default async function HomePage() {

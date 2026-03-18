@@ -10,6 +10,7 @@ import { InfoCard } from "@/components/mdx/InfoCard";
 import { QuoteBlock } from "@/components/mdx/QuoteBlock";
 import { ImageGallery } from "@/components/mdx/ImageGallery";
 import { ScrollReveal } from "@/components/mdx/ScrollReveal";
+import { Globe3D } from "@/components/mdx/Globe3D";
 import { cn } from "@/lib/utils";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -26,6 +27,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     QuoteBlock,
     ImageGallery,
     ScrollReveal,
+    Globe3D,
 
     // Styled HTML element overrides
     h1: ({ children, ...props }) => (

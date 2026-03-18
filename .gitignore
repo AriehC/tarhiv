@@ -38,6 +38,10 @@ yarn-error.log*
 
 # firebase
 .firebase/
+firebase-debug.log*
+
+# backup files
+*.bak
 
 # claude
 .claude/

@@ -1,11 +1,15 @@
 "use client";
 
-import { Suspense, useRef, useMemo, useState, useCallback } from "react";
+import { Suspense, useRef, useMemo, useState, useCallback, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Line, Stars, Html, OrbitControls } from "@react-three/drei";
 import * as THREE from "three";
 import { motion, useInView, AnimatePresence } from "motion/react";
+import { mesh as topoMesh } from "topojson-client";
 import { cn } from "@/lib/utils";
+
+const GEO_URL =
+  "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -90,12 +94,62 @@ function GlobeGrid({ radius }: { radius: number }) {
           key={line.key}
           points={line.points}
           color="#06b6d4"
-          lineWidth={0.6}
-          opacity={0.35}
+          lineWidth={0.4}
+          opacity={0.15}
           transparent
         />
       ))}
     </>
+  );
+}
+
+/* ------------------------------------------------------------------ */
+/*  Continent Outlines (loaded from TopoJSON)                          */
+/* ------------------------------------------------------------------ */
+
+function ContinentOutlines({ radius }: { radius: number }) {
+  const [geometry, setGeometry] = useState<THREE.BufferGeometry | null>(null);
+
+  useEffect(() => {
+    fetch(GEO_URL)
+      .then((res) => res.json())
+      .then((topology) => {
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const boundaries = topoMesh(topology as any, (topology as any).objects.countries);
+        const positions: number[] = [];
+
+        for (const line of boundaries.coordinates) {
+          for (let i = 0; i < line.length - 1; i++) {
+            const [lng1, lat1] = line[i];
+            const [lng2, lat2] = line[i + 1];
+            positions.push(...latLngToVec3(lat1, lng1, radius));
+            positions.push(...latLngToVec3(lat2, lng2, radius));
+          }
+        }
+
+        const geo = new THREE.BufferGeometry();
+        geo.setAttribute(
+          "position",
+          new THREE.Float32BufferAttribute(positions, 3),
+        );
+        setGeometry(geo);
+      })
+      .catch(() => {
+        // Silently fail — grid lines still visible as fallback
+      });
+  }, [radius]);
+
+  if (!geometry) return null;
+
+  return (
+    <lineSegments geometry={geometry}>
+      <lineBasicMaterial
+        color="#38bdf8"
+        transparent
+        opacity={0.28}
+        depthWrite={false}
+      />
+    </lineSegments>
   );
 }
 
@@ -381,6 +435,9 @@ function GlobeScene({
           metalness={0.1}
         />
       </mesh>
+
+      {/* Continent outlines */}
+      <ContinentOutlines radius={1.003} />
 
       {/* Grid */}
       <GlobeGrid radius={1.002} />

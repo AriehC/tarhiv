@@ -100,6 +100,12 @@ const postComponents: Record<string, Record<string, React.ComponentType>> = {
       { loading: MDXLoading },
     ),
   },
+  "israel-superpower": {
+    he: dynamic(
+      () => import("@/../content/posts/israel-superpower/index.he.mdx"),
+      { loading: MDXLoading },
+    ),
+  },
 };
 
 interface PostMeta {
@@ -200,6 +206,16 @@ const postMeta: Record<string, PostMeta> = {
     category: "society",
     date: "2026-03-18",
     readingTime: 12,
+  },
+  "israel-superpower": {
+    title: {
+      he: "מעצמה מול איראן: איך ישראל שינתה את חוקי המשחק",
+      en: "Superpower vs. Iran: How Israel Changed the Rules of the Game",
+    },
+    coverImage: "/images/posts/israel-superpower/hero.svg",
+    category: "society",
+    date: "2026-04-11",
+    readingTime: 14,
   },
 };
 

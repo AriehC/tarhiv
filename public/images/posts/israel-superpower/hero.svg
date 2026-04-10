@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#0a0a20"/>
+      <stop offset="100%" stop-color="#0f0715"/>
+    </linearGradient>
+    <radialGradient id="glow-blue" cx="0.5" cy="0.5">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow-red" cx="0.7" cy="0.4">
+      <stop offset="0%" stop-color="#ef4444" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="neon">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <ellipse cx="500" cy="300" rx="500" ry="400" fill="url(#glow-blue)"/>
+  <ellipse cx="800" cy="250" rx="400" ry="300" fill="url(#glow-red)"/>
+
+  <!-- Shield outline (Star of David integrated) -->
+  <g transform="translate(600, 280)" opacity="0.15">
+    <!-- Outer shield -->
+    <path d="M0,-180 L130,-60 L80,160 L-80,160 L-130,-60 Z" fill="none" stroke="#3b82f6" stroke-width="1.5"/>
+    <!-- Star of David -->
+    <polygon points="0,-90 78,45 -78,45" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+    <polygon points="0,90 78,-45 -78,-45" fill="none" stroke="#60a5fa" stroke-width="1" opacity="0.6"/>
+  </g>
+
+  <!-- Defense dome arcs -->
+  <g fill="none" opacity="0.12">
+    <path d="M200,500 Q600,100 1000,500" stroke="#3b82f6" stroke-width="0.8"/>
+    <path d="M250,500 Q600,150 950,500" stroke="#60a5fa" stroke-width="0.6"/>
+    <path d="M300,500 Q600,200 900,500" stroke="#93c5fd" stroke-width="0.4"/>
+  </g>
+
+  <!-- Radar sweep lines -->
+  <g transform="translate(600, 480)" stroke="#3b82f6" stroke-width="0.5" opacity="0.08">
+    <circle r="300" fill="none"/><circle r="200" fill="none"/><circle r="100" fill="none"/>
+    <line x1="0" y1="0" x2="-250" y2="-200"/>
+    <line x1="0" y1="0" x2="200" y2="-250"/>
+    <line x1="0" y1="0" x2="0" y2="-300"/>
+  </g>
+
+  <!-- Interceptor trajectory lines -->
+  <g stroke-width="1.5" fill="none" opacity="0.25" filter="url(#neon)">
+    <!-- Incoming threats (red, dashed) -->
+    <path d="M1050,80 Q850,200 700,320" stroke="#ef4444" stroke-dasharray="6,4"/>
+    <path d="M1100,150 Q900,250 750,350" stroke="#ef4444" stroke-dasharray="6,4"/>
+    <path d="M980,50 Q800,180 650,300" stroke="#ef4444" stroke-dasharray="6,4"/>
+    <!-- Interceptors (blue) -->
+    <path d="M500,450 Q580,350 700,320" stroke="#3b82f6"/>
+    <path d="M550,470 Q650,380 750,350" stroke="#60a5fa"/>
+    <path d="M480,440 Q560,340 650,300" stroke="#3b82f6"/>
+  </g>
+
+  <!-- Interception points (flashes) -->
+  <g filter="url(#neon)">
+    <circle cx="700" cy="320" r="6" fill="#fbbf24" opacity="0.7"/>
+    <circle cx="700" cy="320" r="12" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.3"/>
+    <circle cx="750" cy="350" r="5" fill="#fbbf24" opacity="0.6"/>
+    <circle cx="750" cy="350" r="10" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.25"/>
+    <circle cx="650" cy="300" r="5.5" fill="#fbbf24" opacity="0.65"/>
+    <circle cx="650" cy="300" r="11" fill="none" stroke="#fbbf24" stroke-width="1" opacity="0.28"/>
+  </g>
+
+  <!-- Satellite / surveillance icon -->
+  <g transform="translate(180, 120)" stroke="#60a5fa" stroke-width="1.2" fill="none" opacity="0.3" filter="url(#neon)">
+    <rect x="-8" y="-4" width="16" height="8" rx="2"/>
+    <line x1="-20" y1="0" x2="-8" y2="0"/>
+    <line x1="8" y1="0" x2="20" y2="0"/>
+    <rect x="-24" y="-8" width="8" height="16" rx="1"/>
+    <rect x="16" y="-8" width="8" height="16" rx="1"/>
+  </g>
+
+  <!-- Missile icon -->
+  <g transform="translate(1020, 100) rotate(30)" stroke="#ef4444" stroke-width="1" fill="none" opacity="0.25" filter="url(#neon)">
+    <path d="M0,-20 L4,-10 L4,15 L8,20 L-8,20 L-4,15 L-4,-10 Z"/>
+    <line x1="-6" y1="20" x2="0" y2="28"/>
+    <line x1="6" y1="20" x2="0" y2="28"/>
+  </g>
+
+  <!-- Data grid overlay -->
+  <g stroke="#3b82f6" stroke-width="0.3" opacity="0.05">
+    <line x1="0" y1="100" x2="1200" y2="100"/>
+    <line x1="0" y1="200" x2="1200" y2="200"/>
+    <line x1="0" y1="300" x2="1200" y2="300"/>
+    <line x1="0" y1="400" x2="1200" y2="400"/>
+    <line x1="0" y1="500" x2="1200" y2="500"/>
+    <line x1="200" y1="0" x2="200" y2="600"/>
+    <line x1="400" y1="0" x2="400" y2="600"/>
+    <line x1="600" y1="0" x2="600" y2="600"/>
+    <line x1="800" y1="0" x2="800" y2="600"/>
+    <line x1="1000" y1="0" x2="1000" y2="600"/>
+  </g>
+
+  <!-- Floating particles -->
+  <g fill="#3b82f6" opacity="0.35">
+    <circle cx="120" cy="80" r="1.5"/><circle cx="1080" cy="520" r="1"/>
+    <circle cx="80" cy="450" r="1.2"/><circle cx="350" cy="50" r="1"/>
+  </g>
+  <g fill="#ef4444" opacity="0.25">
+    <circle cx="950" cy="70" r="1"/><circle cx="1100" cy="200" r="1.2"/>
+  </g>
+  <g fill="#fbbf24" opacity="0.3">
+    <circle cx="680" cy="280" r="1"/><circle cx="730" cy="340" r="0.8"/>
+  </g>
+</svg>

@@ -137,6 +137,21 @@ const getMockPosts = (locale: string) => [
     category: "society",
     readingTime: 12,
   },
+  {
+    slug: "israel-superpower",
+    title:
+      locale === "he"
+        ? "מעצמה מול איראן: איך ישראל שינתה את חוקי המשחק"
+        : "Superpower vs. Iran: How Israel Changed the Rules of the Game",
+    description:
+      locale === "he"
+        ? "מכיפת ברזל ועד חץ-3, מסייבר ועד מודיעין — איך מדינה קטנה בנתה את מערך ההגנה המתוחכם בהיסטוריה"
+        : "From Iron Dome to Arrow-3, from cyber to intelligence — how a small nation built history's most sophisticated defense",
+    coverImage: "/images/posts/israel-superpower/hero.svg",
+    date: "2026-04-11",
+    category: "society",
+    readingTime: 14,
+  },
 ];
 
 export default async function HomePage() {

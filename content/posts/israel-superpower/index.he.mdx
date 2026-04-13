@@ -15,22 +15,24 @@ export const keyStats = [
 
 ישראל היא המדינה היחידה בעולם שמפעילה מערכת הגנה אווירית רב-שכבתית שלמה. כל שכבה מטפלת באיום אחר — מרקטות קצרות טווח ועד טילים בליסטיים בין-יבשתיים. בלילה של אפריל 2026, כל חמש השכבות פעלו בו-זמנית לראשונה בהיסטוריה.
 
-export const defenseLayers = [
-  { layer: "כיפת ברזל", range: "4-70", type: "רקטות, מרגמות, מל\"טים", status: "מבצעי מאז 2011", color: "#3b82f6" },
-  { layer: "שרביט קסמים", range: "40-300", type: "טילים בליסטיים וטילי שיוט", status: "מבצעי מאז 2017", color: "#8b5cf6" },
-  { layer: "חץ-2", range: "90-150 ק\"מ גובה", type: "טילים בליסטיים באטמוספרה", status: "מבצעי מאז 2000", color: "#06b6d4" },
-  { layer: "חץ-3", range: "אקזואטמוספרי", type: "טילים בליסטיים בחלל", status: "מבצעי מאז 2017", color: "#f59e0b" },
-  { layer: "חץ-4 / אור ברק", range: "אסטרטגי", type: "איומים בליסטיים מתקדמים", status: "בפיתוח / הפעלה ראשונית", color: "#ef4444" },
+export const interceptionData = [
+  { name: "כיפת ברזל", interceptions: 85 },
+  { name: "שרביט קסמים", interceptions: 72 },
+  { name: "חץ-2", interceptions: 31 },
+  { name: "חץ-3", interceptions: 12 },
+  { name: "חיל האוויר", interceptions: 45 },
 ];
 
-export const defenseChartData = [
-  { name: "כיפת ברזל", range: 70 },
-  { name: "שרביט קסמים", range: 300 },
-  { name: "חץ-2", range: 150 },
-  { name: "חץ-3", range: 2400 },
+<DataChart type="bar" data={interceptionData} xKey="name" yKeys={[{ key: "interceptions", label: "יירוטים", color: "#3b82f6" }]} title="יירוטים לפי מערכת — ליל אפריל 2026" />
+
+export const threatBreakdown = [
+  { name: "מל״טים מתאבדים", value: 120 },
+  { name: "טילי שיוט", value: 65 },
+  { name: "טילים בליסטיים", value: 43 },
+  { name: "רקטות", value: 17 },
 ];
 
-<DataChart type="bar" data={defenseChartData} xKey="name" yKeys={[{ key: "range", label: "טווח מרבי (קמ)", color: "#3b82f6" }]} title="טווח מערכות ההגנה האוויריות (קמ)" />
+<DataChart type="pie" data={threatBreakdown} xKey="name" yKeys={[{ key: "value", label: "כמות", color: "#3b82f6" }]} title="התפלגות האיומים שיורטו — אפריל 2026" />
 
 <InfoCard type="info" title="לילה אחד, חמש שכבות">
 באפריל 2026, כשאיראן שיגרה גל של טילים בליסטיים, טילי שיוט ומל"טים מתאבדים, כל שכבות ההגנה פעלו בתיאום: כיפת ברזל יירטה את המל"טים הקטנים, שרביט קסמים טיפל בטילי השיוט, חץ-2 וחץ-3 השמידו טילים בליסטיים בתוך ומחוץ לאטמוספרה. התוצאה: אחוז יירוט חסר תקדים בהיסטוריה הצבאית.
@@ -65,17 +67,17 @@ export const exportData = [
   { year: "2025", exports: 16.0 },
 ];
 
-<DataChart type="area" data={exportData} xKey="year" yKeys={[{ key: "exports", label: "ייצוא ביטחוני (מיליארד $)", color: "#3b82f6" }]} title="ייצוא ביטחוני ישראלי (מיליארד $)" />
+<DataChart type="line" data={exportData} xKey="year" yKeys={[{ key: "exports", label: "ייצוא ביטחוני (מיליארד $)", color: "#3b82f6" }]} title="ייצוא ביטחוני ישראלי (מיליארד $)" />
 
 export const topSystems = [
-  { system: "כיפת ברזל", type: "הגנה אווירית", buyers: "ישראל, ארה\"ב, מדינות נוספות", revenue: 2.8 },
-  { system: "הרון / הרמס (מל\"טים)", type: "מל\"טים", buyers: "30+ מדינות", revenue: 3.5 },
-  { system: "ספייק (טילים)", type: "טילים מונחים", buyers: "35+ מדינות", revenue: 2.1 },
-  { system: "Trophy (מעיל רוח)", type: "הגנה אקטיבית לכלי רכב", buyers: "ישראל, ארה\"ב, גרמניה", revenue: 1.2 },
-  { system: "מערכות סייבר", type: "לוחמת סייבר", buyers: "מסווג", revenue: 4.5 },
+  { system: "סייבר", revenue: 4.5 },
+  { system: "מל״טים", revenue: 3.5 },
+  { system: "כיפת ברזל", revenue: 2.8 },
+  { system: "ספייק", revenue: 2.1 },
+  { system: "מעיל רוח", revenue: 1.2 },
 ];
 
-<DataChart type="bar" data={topSystems} xKey="system" yKeys={[{ key: "revenue", label: "הכנסות (מיליארד $)", color: "#8b5cf6" }]} title="מערכות ביטחוניות מובילות — הכנסות שנתיות (מיליארד $)" />
+<DataChart type="bar" data={topSystems} xKey="system" yKeys={[{ key: "revenue", label: "הכנסות (מיליארד $)", color: "#8b5cf6" }]} title="מערכות מובילות לפי הכנסות (מיליארד $)" showLegend={false} />
 
 ## השוואה אזורית: ישראל מול איראן
 
@@ -85,14 +87,14 @@ export const comparisonColumns = [
 ];
 
 export const comparisonRows = [
-  { label: "אוכלוסייה (מיליון)", values: { israel: "10", iran: "90" }, type: "number" },
-  { label: "תקציב ביטחון ($B)", values: { israel: "$24B", iran: "$10B" }, type: "text" },
-  { label: "חיילים סדירים", values: { israel: "170K", iran: "610K" }, type: "number" },
-  { label: "מטוסי קרב", values: { israel: "345", iran: "186" }, type: "bar" },
-  { label: "יכולת גרעינית", values: { israel: "לא מאושר (הערכה: כן)", iran: "סף גרעיני" }, type: "text" },
-  { label: "הגנה אווירית רב-שכבתית", values: { israel: "5 שכבות", iran: "חלקית" }, type: "text" },
-  { label: "יכולת סייבר", values: { israel: "מעצמה עולמית (Top 5)", iran: "יכולת משמעותית" }, type: "text" },
-  { label: "מל\"טים מתקדמים", values: { israel: "מובילה עולמית", iran: "יצרנית גדולה" }, type: "text" },
+  { label: "אוכלוסייה (מיליון)", values: { israel: 10, iran: 90 }, type: "bar" },
+  { label: "תקציב ביטחון (מיליארד $)", values: { israel: 24, iran: 10 }, type: "bar" },
+  { label: "חיילים סדירים (אלפים)", values: { israel: 170, iran: 610 }, type: "bar" },
+  { label: "מטוסי קרב", values: { israel: 345, iran: 186 }, type: "bar" },
+  { label: "טנקים", values: { israel: 1370, iran: 1996 }, type: "bar" },
+  { label: "הגנה אווירית (שכבות)", values: { israel: 5, iran: 1 }, type: "bar" },
+  { label: "יכולת גרעינית", values: { israel: "לא מאושר", iran: "סף גרעיני" }, type: "text" },
+  { label: "יכולת סייבר", values: { israel: "Top 5 עולמי", iran: "משמעותית" }, type: "text" },
 ];
 
 <ComparisonTable columns={comparisonColumns} rows={comparisonRows} title="ישראל מול איראן: השוואה צבאית" highlightColumn="israel" />
@@ -117,14 +119,19 @@ export const cyberStats = [
 
 export const usAidData = [
   { year: "2016", aid: 3.1 },
+  { year: "2017", aid: 3.2 },
   { year: "2018", aid: 3.3 },
+  { year: "2019", aid: 3.8 },
   { year: "2020", aid: 3.8 },
+  { year: "2021", aid: 3.8 },
   { year: "2022", aid: 3.8 },
+  { year: "2023", aid: 3.8 },
   { year: "2024", aid: 3.8 },
+  { year: "2025", aid: 4.0 },
   { year: "2026", aid: 4.5 },
 ];
 
-<DataChart type="area" data={usAidData} xKey="year" yKeys={[{ key: "aid", label: "סיוע אמריקאי (מיליארד $)", color: "#06b6d4" }]} title="הסיוע הביטחוני האמריקאי לישראל (מיליארד $)" />
+<DataChart type="area" data={usAidData} xKey="year" yKeys={[{ key: "aid", label: "סיוע שנתי (מיליארד $)", color: "#06b6d4" }]} title="הסיוע הביטחוני האמריקאי לישראל (מיליארד $)" />
 
 הברית עם ארצות הברית היא נכס אסטרטגי שאין לו תחליף. מ-3.8 מיליארד דולר בסיוע שנתי (במסגרת הסכם העשור שנחתם ב-2016), דרך שיתופי פעולה מודיעיניים ושיתוף בפיתוח מערכות כמו חץ-3 ואור ברק, ועד לתמיכה דיפלומטית בזירה הבינלאומית — הקשר האמריקאי הוא עמוד השדרה של עוצמת ישראל. באפריל 2026, הסיוע האמריקאי עלה ל-4.5 מיליארד כחלק מחבילת חירום.
 

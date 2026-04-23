@@ -53,7 +53,7 @@ export const coffeeTimeline = [
 
 ## מי שותה הכי הרבה? מפת הצריכה העולמית
 
-אם חשבתם שאיטליה או ארה"ב מובילות בצריכת קפה, טעיתם בגדול. הסקנדינבים הם אלופי הקפה בעולם, עם פינלנד בראש — 12 קילוגרם לנפש בשנה, כמעט פי שלושה מאיטליה. זה בערך 4-5 כוסות ביום לכל פיני בוגר.
+אם חשבתם שאיטליה או ארה"ב מובילות בצריכת קפה, טעיתם בגדול. הסקנדינבים הם אלופי הקפה בעולם, עם פינלנד בראש — 12 קילוגרם לנפש בשנה, יותר מפי שניים וחצי מאיטליה. זה בערך 4-5 כוסות ביום לכל פיני בוגר.
 
 export const consumptionMapData = [
   { id: "FIN", name: "פינלנד", value: 12 },
@@ -183,17 +183,17 @@ export const economicStats = [
 תרבות הקפה הישראלית היא סיפור של מיזוג תרבויות. העולים ממדינות ערב הביאו את הקפה הטורקי ("בוץ" בסלנג), העולים מאירופה הביאו את הפילטר, ותרבות הקפה האיטלקית חדרה בשנות ה-90 — וכך נולד "ההפוך", המשקה הכי ישראלי שיש: אספרסו כפול עם הרבה חלב מוקצף, שמוגש בכוס גדולה.
 
 export const israelCoffeeData = [
-  { year: "1990", cafes: 200, consumption: 2.5 },
-  { year: "1995", cafes: 800, consumption: 3.0 },
-  { year: "2000", cafes: 2500, consumption: 3.5 },
-  { year: "2005", cafes: 4000, consumption: 3.8 },
-  { year: "2010", cafes: 5500, consumption: 4.0 },
-  { year: "2015", cafes: 7000, consumption: 4.3 },
-  { year: "2020", cafes: 8000, consumption: 4.5 },
-  { year: "2025", cafes: 9500, consumption: 4.8 },
+  { year: "1990", cafes: 200 },
+  { year: "1995", cafes: 800 },
+  { year: "2000", cafes: 2500 },
+  { year: "2005", cafes: 4000 },
+  { year: "2010", cafes: 5500 },
+  { year: "2015", cafes: 7000 },
+  { year: "2020", cafes: 8000 },
+  { year: "2025", cafes: 9500 },
 ];
 
-<DataChart type="line" data={israelCoffeeData} xKey="year" yKeys={[{ key: "cafes", label: "מספר בתי קפה", color: "#06b6d4" }, { key: "consumption", label: 'צריכה לנפש (ק"ג)', color: "#a855f7" }]} title="מהפכת הקפה בישראל: בתי קפה וצריכה לנפש" />
+<DataChart type="area" data={israelCoffeeData} xKey="year" yKeys={[{ key: "cafes", label: "מספר בתי קפה", color: "#06b6d4" }]} title="מהפכת הקפה בישראל: גידול במספר בתי הקפה" />
 
 <InfoCard type="info" title="'הפוך' — ההמצאה הישראלית">
 ה"הפוך" הישראלי הוא למעשה גרסה ייחודית של קפה לאטה — אבל עם זהות משלו. השם "הפוך" בא מכך שסדר ההכנה הפוך: קודם שופכים את החלב המוקצף ואז מוסיפים מעל את האספרסו. בישראל, "הפוך" הוא כל כך פופולרי שהוא מהווה כ-60% מכל ההזמנות בבתי קפה. תיירים אוהבים לגלות שאפשר לשבת בבית קפה בתל אביב שעות ארוכות מבלי שמישהו ילחץ אותם לפנות את השולחן.
@@ -204,19 +204,19 @@ export const israelCoffeeData = [
 במשך עשרות שנים, הקפה נתפס כמשקה לא בריא. אבל מחקרים עדכניים הפכו את התמונה: צריכה מתונה של קפה (3-5 כוסות ביום) קשורה דווקא ליתרונות בריאותיים משמעותיים.
 
 export const healthData = [
-  { effect: "סוכרת סוג 2", risk: -25 },
-  { effect: "פרקינסון", risk: -30 },
-  { effect: "אלצהיימר", risk: -20 },
-  { effect: "שחמת הכבד", risk: -40 },
-  { effect: "דיכאון", risk: -15 },
-  { effect: "סרטן הכבד", risk: -35 },
+  { effect: "שחמת הכבד", reduction: 40 },
+  { effect: "סרטן הכבד", reduction: 35 },
+  { effect: "פרקינסון", reduction: 30 },
+  { effect: "סוכרת סוג 2", reduction: 25 },
+  { effect: "אלצהיימר", reduction: 20 },
+  { effect: "דיכאון", reduction: 15 },
 ];
 
-<DataChart type="bar" data={healthData} xKey="effect" yKeys={[{ key: "risk", label: "שינוי בסיכון (%)", color: "#06b6d4" }]} title="השפעת צריכת קפה מתונה (3-5 כוסות/יום) על סיכון למחלות" />
+<DataChart type="bar" data={healthData} xKey="effect" yKeys={[{ key: "reduction", label: "הפחתה בסיכון (%)", color: "#06b6d4" }]} title="השפעת צריכת קפה מתונה (3-5 כוסות/יום) על סיכון למחלות" />
 
 <ScrollReveal>
 
-<QuoteBlock author="טלירנד" role="מדינאי צרפתי, המאה ה-18">
+<QuoteBlock author="טליראן" role="מדינאי צרפתי, המאה ה-18">
 קפה טוב צריך להיות שחור כלילה, חם כגיהנום, וטהור כמלאך.
 </QuoteBlock>
 

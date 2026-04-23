@@ -56,14 +56,14 @@ export const worldLanguageData = [
 המספרים מספרים סיפור דרמטי. מתוך 7,168 שפות בעולם, כ-3,045 מוגדרות על ידי UNESCO כנמצאות בדרגות סכנה שונות. אבל ההתפלגות חושפת תמונה עמוקה יותר: 573 שפות כבר נמצאות במצב קריטי — עם פחות מעשרה דוברים, כולם מבוגרים. עוד 891 שפות נמצאות בסכנה חמורה, ו-682 בסכנה ודאית. מדי שנה, כ-26 שפות נעלמות לתמיד.
 
 export const endangermentData = [
-  { category: "בטוחות", count: 4123, percentage: 57.5 },
-  { category: "פגיעות", count: 899, percentage: 12.5 },
-  { category: "בסכנה", count: 682, percentage: 9.5 },
-  { category: "בסכנה חמורה", count: 891, percentage: 12.4 },
-  { category: "קריטיות", count: 573, percentage: 8.0 },
+  { category: "בטוחות", count: 4123 },
+  { category: "פגיעות", count: 899 },
+  { category: "בסכנה", count: 682 },
+  { category: "בסכנה חמורה", count: 891 },
+  { category: "קריטיות", count: 573 },
 ];
 
-<DataChart type="bar" data={endangermentData} xKey="category" yKeys={[{ key: "count", label: "מספר שפות", color: "#06b6d4" }, { key: "percentage", label: "אחוז (%)", color: "#a855f7" }]} title="דרגות הסכנה של שפות העולם (UNESCO)" />
+<DataChart type="bar" data={endangermentData} xKey="category" yKeys={[{ key: "count", label: "מספר שפות", color: "#06b6d4" }]} title="דרגות הסכנה של שפות העולם (UNESCO)" />
 
 ## ירידה מתמשכת: שפות שנעלמו לאורך ההיסטוריה
 
@@ -122,12 +122,12 @@ export const digitalStats = [
 ## ציר הזמן: שפות שנעלמו ושפות שניצלו
 
 export const timelineEvents = [
-  { date: "1777", title: "שפת אובייקוה נכחדת", description: "שפת אובייקוה (Ubykh) מהקווקז — בעלת 84 עיצורים, הכי הרבה בכל שפה ידועה — מתחילה לדעוך עם גלי הגירה מהקווקז." },
+  { date: "1864", title: "תחילת דעיכת אובייקה", description: "לאחר כיבוש הקווקז על ידי רוסיה, דוברי אובייקה (Ubykh) מגורשים לאימפריה העות׳מאנית. גלי ההגירה והטמיעה מתחילים את תהליך הכחדתה של השפה." },
   { date: "1820", title: "תחילת מות שפות אוסטרליה", description: "מתוך כ-250 שפות ילידיות באוסטרליה, תהליך הקולוניזציה מתחיל להשמיד קהילות לשוניות שלמות.", highlight: true },
   { date: "1898", title: "כיבוש הוואי", description: "ארה\"ב אוסרת את לימוד ההוואית בבתי ספר. השפה כמעט נכחדת לחלוטין." },
   { date: "1935", title: "מנואל סגורה — הדובר האחרון", description: "מנואל סגורה, הדובר האחרון של שפת הקורנית העתיקה, מת. השפה תוחיה חלקית רק עשרות שנים מאוחר יותר." },
   { date: "1961", title: "חוק השפה הוולשית", description: "בריטניה מעניקה לוולשית מעמד רשמי. תחילת מהפך דרמטי: מ-18% דוברים ל-29% כיום.", highlight: true },
-  { date: "1972", title: "קני לועליו — הדובר האחרון", description: "תפויוט אובויקוווה (Tevfik Esenc), הדובר האחרון של אובייקוה, נפטר בטורקיה. 84 עיצורים נעלמו לנצח.", highlight: true },
+  { date: "1992", title: "הדובר האחרון של אובייקה", description: "תוופיק אסנץ׳ (Tevfik Esenç), הדובר האחרון של שפת אובייקה — בעלת 84 עיצורים, הכי הרבה בכל שפה שתועדה — נפטר בטורקיה. שפה שלמה נעלמת מהעולם.", highlight: true },
   { date: "1983", title: "תחילת תחיית ההוואית", description: "תוכנית 'קן הפונלנה' (Punana Leo) מוקמת — גני ילדים בהוואית. כיום יש כ-2,000 דוברי אם חדשים." },
   { date: "1992", title: "הכרזת האו\"ם", description: "האו\"ם מכריז על חשיבות שימור שפות ילידיות. תחילת המודעות העולמית.", highlight: true },
   { date: "2010", title: "בואה — שפה עם דוברת אחת", description: "בואה סר (Boa Sr), הדוברת האחרונה של שפת בואה מאיי אנדמן, נפטרת בגיל 85. שפה בת 65,000 שנה נעלמת." },
@@ -181,17 +181,29 @@ export const criticalLanguagesData = [
 
 ישראל, שחוותה בעצמה את הנס של תחיית שפה, מתמודדת כיום עם אתגרי שימור לשוניים משלה. ערבית ארץ-ישראלית (הניב הפלסטיני המקומי), יידיש ולאדינו — שלוש שפות עם היסטוריה עשירה — נמצאות בדרגות סכנה שונות.
 
-export const israelLanguagesData = [
-  { language: "ערבית (ניבים מקומיים)", speakers: 1800000, status: 85 },
-  { language: "יידיש", speakers: 250000, status: 40 },
-  { language: "אמהרית", speakers: 180000, status: 60 },
-  { language: "רוסית", speakers: 1000000, status: 70 },
-  { language: "לאדינו", speakers: 15000, status: 15 },
-  { language: "ערבית יהודית-מרוקאית", speakers: 50000, status: 10 },
-  { language: "ערבית יהודית-עיראקית", speakers: 30000, status: 8 },
+export const israelLanguagesSpeakersData = [
+  { language: "ערבית (ניבים מקומיים)", speakers: 1800000 },
+  { language: "רוסית", speakers: 1000000 },
+  { language: "יידיש", speakers: 250000 },
+  { language: "אמהרית", speakers: 180000 },
+  { language: "ערבית יהודית-מרוקאית", speakers: 50000 },
+  { language: "ערבית יהודית-עיראקית", speakers: 30000 },
+  { language: "לאדינו", speakers: 15000 },
 ];
 
-<DataChart type="bar" data={israelLanguagesData} xKey="language" yKeys={[{ key: "speakers", label: "דוברים בישראל", color: "#06b6d4" }, { key: "status", label: "בריאות השפה (0-100)", color: "#a855f7" }]} title="שפות מיעוט בישראל: דוברים ומצב שימור" />
+<DataChart type="bar" data={israelLanguagesSpeakersData} xKey="language" yKeys={[{ key: "speakers", label: "דוברים בישראל", color: "#06b6d4" }]} title="שפות מיעוט בישראל: מספר דוברים" />
+
+export const israelLanguagesHealthData = [
+  { language: "ערבית (ניבים מקומיים)", status: 85 },
+  { language: "רוסית", status: 70 },
+  { language: "אמהרית", status: 60 },
+  { language: "יידיש", status: 40 },
+  { language: "לאדינו", status: 15 },
+  { language: "ערבית יהודית-מרוקאית", status: 10 },
+  { language: "ערבית יהודית-עיראקית", status: 8 },
+];
+
+<DataChart type="bar" data={israelLanguagesHealthData} xKey="language" yKeys={[{ key: "status", label: "בריאות השפה (0-100)", color: "#a855f7" }]} title="שפות מיעוט בישראל: מצב שימור" />
 
 <InfoCard type="info" title="לאדינו: הספרדית של היהודים">
 לאדינו, שפת היהודים ממוצא ספרדי, דוברה על ידי מאות אלפים לפני השואה. היום נותרו כ-15,000 דוברים בישראל — כמעט כולם מעל גיל 70. האקדמיה הלאומית ללאדינו בישראל פועלת לשימור השפה, אבל ללא דור צעיר שמאמץ אותה, העתיד קודר. בניגוד לעברית שקמה לתחייה כשפת מדינה, ללאדינו אין "בית לאומי" שיחייה אותה.

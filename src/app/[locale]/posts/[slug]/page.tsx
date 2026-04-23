@@ -9,6 +9,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Badge, type BadgeCategory } from "@/components/ui/Badge";
 import { CommentSection } from "@/components/comments/CommentSection";
 import { PostEngagement } from "@/components/posts/PostEngagement";
+import { ShareButtons } from "@/components/posts/ShareButtons";
 import { Skeleton } from "@/components/ui/Skeleton";
 
 function MDXLoading() {
@@ -103,6 +104,12 @@ const postComponents: Record<string, Record<string, React.ComponentType>> = {
   "israel-superpower": {
     he: dynamic(
       () => import("@/../content/posts/israel-superpower/index.he.mdx"),
+      { loading: MDXLoading },
+    ),
+  },
+  "israel-78": {
+    he: dynamic(
+      () => import("@/../content/posts/israel-78/index.he.mdx"),
       { loading: MDXLoading },
     ),
   },
@@ -217,6 +224,16 @@ const postMeta: Record<string, PostMeta> = {
     date: "2026-04-11",
     readingTime: 14,
   },
+  "israel-78": {
+    title: {
+      he: "78 שנה למדינה: ישראל במספרים, בסיפורים ובמסע של שמונה עשורים",
+      en: "Israel at 78: A Nation in Numbers, Stories, and Eight Decades of Journey",
+    },
+    coverImage: "/images/posts/israel-78/hero.svg",
+    category: "society",
+    date: "2026-04-22",
+    readingTime: 11,
+  },
 };
 
 export async function generateMetadata({
@@ -312,6 +329,13 @@ export default async function PostPage({
                 </span>
                 <PostEngagement postSlug={slug} />
               </div>
+              <div className="mt-6 pt-4 border-t border-surface-200/30">
+                <ShareButtons
+                  title={meta.title[locale] ?? meta.title.he}
+                  slug={slug}
+                  locale={locale}
+                />
+              </div>
               <div className="mt-6 h-px bg-gradient-to-r from-transparent via-brand-400/30 to-transparent" />
             </header>
           )}
@@ -322,8 +346,15 @@ export default async function PostPage({
           </article>
 
           {/* Bottom engagement bar */}
-          <div className="mt-10 flex items-center justify-center py-4 rounded-xl bg-surface-0/50 backdrop-blur-sm border border-surface-200/50">
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4 py-4 px-6 rounded-xl bg-surface-0/50 backdrop-blur-sm border border-surface-200/50">
             <PostEngagement postSlug={slug} />
+            {meta && (
+              <ShareButtons
+                title={meta.title[locale] ?? meta.title.he}
+                slug={slug}
+                locale={locale}
+              />
+            )}
           </div>
 
           {/* Divider */}

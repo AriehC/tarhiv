@@ -152,6 +152,21 @@ const getMockPosts = (locale: string) => [
     category: "society",
     readingTime: 14,
   },
+  {
+    slug: "israel-78",
+    title:
+      locale === "he"
+        ? "78 שנה למדינה: ישראל במספרים, בסיפורים ובמסע של שמונה עשורים"
+        : "Israel at 78: A Nation in Numbers, Stories, and Eight Decades of Journey",
+    description:
+      locale === "he"
+        ? "מ-806 אלף ל-10 מיליון, מצנע למעצמת היי-טק, משבע מלחמות לשישה הסכמי שלום — המסע המופלא של 78 שנות עצמאות"
+        : "From 806K to 10M, from austerity to tech powerhouse, from seven wars to six peace agreements — the remarkable journey of 78 years of independence",
+    coverImage: "/images/posts/israel-78/hero.svg",
+    date: "2026-04-22",
+    category: "society",
+    readingTime: 11,
+  },
 ];
 
 export default async function HomePage() {

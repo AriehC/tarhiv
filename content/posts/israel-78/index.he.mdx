@@ -1,7 +1,7 @@
 בחמישי באייר תש״ח, בשעה ארבע אחר הצהריים, במוזיאון תל אביב שבשדרות רוטשילד, עמד דוד בן-גוריון מול 250 איש ואמר שלוש-עשרה מילים ששינו את ההיסטוריה: "אנו מכריזים בזאת על הקמתה של מדינה יהודית בארץ-ישראל, היא מדינת ישראל". 78 שנה חלפו מאז אותו רגע. המדינה הזו, שקמה כשהיא מוקפת אויבים, ללא משאבי טבע, עם אוכלוסייה של 806 אלף בלבד — הפכה לאחד הסיפורים המופלאים של המאה העשרים ואחת. היום, ב-2026, חיים בישראל כמעט 10 מיליון אזרחים, התמ"ג עומד על 560 מיליארד דולר, ותוחלת החיים היא בין הגבוהות בעולם. זהו סיפור של שמונה עשורים בלתי סבירים.
 
 export const keyStats = [
-  { value: "9.9M", label: "אזרחים ב-2026", icon: "Users" },
+  { value: "10M", label: "אזרחים ב-2026", icon: "Users" },
   { value: "806K", label: "אזרחים ב-1948", icon: "Clock" },
   { value: "x12", label: "גידול באוכלוסייה", icon: "TrendingUp" },
   { value: "$560B", label: 'תמ"ג (2026)', icon: "DollarSign" },
@@ -16,17 +16,15 @@ export const keyStats = [
 ב-1948, האוכלוסייה היהודית בארץ ישראל מנתה 650 אלף נפש, ויחד עם המיעוט הערבי הישראלי — כ-806 אלף אזרחים. שמונה עשורים מאוחר יותר, המדינה חצתה את רף 10 המיליון. זהו אחד מקצבי הצמיחה הדמוגרפיים המהירים בעולם המערבי — שילוב של עלייה המונית, שיעורי ילודה יחסית גבוהים, ותוחלת חיים שהאריכה ב-20 שנה בממוצע.
 
 export const populationData = [
-  { year: "1948", population: 0.806 },
-  { year: "1955", population: 1.789 },
-  { year: "1965", population: 2.598 },
-  { year: "1975", population: 3.493 },
-  { year: "1985", population: 4.266 },
-  { year: "1995", population: 5.619 },
-  { year: "2005", population: 6.930 },
-  { year: "2015", population: 8.345 },
-  { year: "2020", population: 9.216 },
-  { year: "2023", population: 9.795 },
-  { year: "2026", population: 9.9 },
+  { year: "1948", population: 0.8 },
+  { year: "1960", population: 2.2 },
+  { year: "1970", population: 3.0 },
+  { year: "1980", population: 3.9 },
+  { year: "1990", population: 4.8 },
+  { year: "2000", population: 6.4 },
+  { year: "2010", population: 7.7 },
+  { year: "2020", population: 9.2 },
+  { year: "2026", population: 10.0 },
 ];
 
 <DataChart type="area" data={populationData} xKey="year" yKeys={[{ key: "population", label: "אוכלוסייה (מיליונים)", color: "#3b82f6" }]} title="אוכלוסיית ישראל: 1948-2026 (מיליונים)" />
@@ -65,7 +63,7 @@ export const comparisonColumns = [
 ];
 
 export const comparisonRows = [
-  { label: "אוכלוסייה", values: { "1948": "806K", "2026": "9.9M" }, type: "text" },
+  { label: "אוכלוסייה", values: { "1948": "806K", "2026": "10M" }, type: "text" },
   { label: "תמ״ג לנפש", values: { "1948": "$1,650", "2026": "$56,500" }, type: "text" },
   { label: "תוחלת חיים (שנים)", values: { "1948": 65, "2026": 84 }, type: "bar" },
   { label: "מספר ערים", values: { "1948": 14, "2026": 77 }, type: "bar" },

@@ -17,7 +17,8 @@ export function ThemeToggle() {
     return (
       <button
         className="p-2 rounded-xl bg-surface-100/50 text-text-secondary"
-        aria-label="Toggle theme"
+        aria-hidden="true"
+        tabIndex={-1}
       >
         <div className="h-5 w-5" />
       </button>
@@ -29,7 +30,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="p-2 rounded-xl bg-surface-100/50 hover:bg-surface-200/50 text-text-secondary hover:text-brand-400 transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_var(--glow-brand)]"
+      className="p-2 rounded-xl bg-surface-100/50 hover:bg-surface-200/50 text-text-secondary hover:text-brand-400 transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_var(--glow-brand)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
     >
       <AnimatePresence mode="wait" initial={false}>

@@ -43,6 +43,9 @@ firebase-debug.log*
 # backup files
 *.bak
 
+# stray esbuild binary (extracted by npm install side-effect)
+/esbuild
+
 # claude
 .claude/
 

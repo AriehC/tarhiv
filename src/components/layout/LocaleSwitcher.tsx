@@ -20,10 +20,10 @@ export function LocaleSwitcher() {
   return (
     <button
       onClick={switchLocale}
-      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-100/50 hover:bg-surface-200/50 text-text-secondary hover:text-brand-400 text-sm font-medium transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_var(--glow-brand)]"
+      className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-surface-100/50 hover:bg-surface-200/50 text-text-secondary hover:text-brand-400 text-sm font-medium transition-all duration-300 cursor-pointer hover:shadow-[0_0_15px_var(--glow-brand)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
       aria-label={locale === "he" ? "Switch to English" : "עבור לעברית"}
     >
-      <Languages className="h-4 w-4" />
+      <Languages className="h-4 w-4" aria-hidden="true" />
       <span>{locale === "he" ? "EN" : "עב"}</span>
     </button>
   );

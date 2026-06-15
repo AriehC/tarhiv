@@ -73,7 +73,10 @@ function InfoCard({ type, title, children }: InfoCardProps) {
       )}
     >
       <div className="mb-2 flex items-center gap-2">
-        <IconComponent className={cn("h-5 w-5 shrink-0", config.iconColor)} />
+        <IconComponent
+          className={cn("h-5 w-5 shrink-0", config.iconColor)}
+          aria-hidden="true"
+        />
         <h4 className={cn("text-base font-bold", config.titleColor)}>
           {displayTitle}
         </h4>

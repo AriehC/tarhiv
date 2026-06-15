@@ -4,19 +4,10 @@ import { useState, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import { CategoryFilter, type Category } from "@/components/home/CategoryFilter";
 import { PostCard } from "@/components/home/PostCard";
-
-interface Post {
-  slug: string;
-  title: string;
-  description: string;
-  coverImage: string;
-  date: string;
-  category: string;
-  readingTime: number;
-}
+import type { LocalizedPost } from "@/lib/posts";
 
 interface PostsPageContentProps {
-  posts: Post[];
+  posts: LocalizedPost[];
   locale: string;
 }
 
@@ -48,9 +39,7 @@ export function PostsPageContent({ posts, locale }: PostsPageContentProps) {
 
       {filteredPosts.length === 0 && (
         <p className="text-center text-text-muted py-12">
-          {locale === "he"
-            ? "לא נמצאו פוסטים בקטגוריה זו"
-            : "No posts found in this category"}
+          {t("no_posts_in_category")}
         </p>
       )}
     </>

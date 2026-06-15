@@ -1,35 +1,33 @@
 import type { MDXComponents } from "mdx/types";
-import { AnimatedCounter } from "@/components/mdx/AnimatedCounter";
+import dynamic from "next/dynamic";
 import { StatGrid } from "@/components/mdx/StatGrid";
-import { DataChart } from "@/components/mdx/DataChart";
-import { InteractiveMap } from "@/components/mdx/InteractiveMap";
 import { Timeline } from "@/components/mdx/Timeline";
 import { ComparisonTable } from "@/components/mdx/ComparisonTable";
-import { HeroSection } from "@/components/mdx/HeroSection";
 import { InfoCard } from "@/components/mdx/InfoCard";
 import { QuoteBlock } from "@/components/mdx/QuoteBlock";
-import { ImageGallery } from "@/components/mdx/ImageGallery";
 import { ScrollReveal } from "@/components/mdx/ScrollReveal";
-import { Globe3D } from "@/components/mdx/Globe3D";
+import { Globe3D } from "@/components/mdx/Globe3DClient";
 import { cn } from "@/lib/utils";
+
+const DataChart = dynamic(() =>
+  import("@/components/mdx/DataChart").then((m) => m.DataChart),
+);
+const InteractiveMap = dynamic(() =>
+  import("@/components/mdx/InteractiveMap").then((m) => m.InteractiveMap),
+);
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    // Custom visual components
-    AnimatedCounter,
     StatGrid,
     DataChart,
     InteractiveMap,
     Timeline,
     ComparisonTable,
-    HeroSection,
     InfoCard,
     QuoteBlock,
-    ImageGallery,
     ScrollReveal,
     Globe3D,
 
-    // Styled HTML element overrides
     h1: ({ children, ...props }) => (
       <h1
         className={cn(
@@ -83,6 +81,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
           "text-brand-500 underline decoration-brand-500/30 underline-offset-2",
           "transition-all hover:text-brand-400 hover:decoration-brand-400/60",
           "hover:shadow-[0_2px_10px_var(--glow-brand)]",
+          "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500 rounded-sm",
         )}
         target={href?.startsWith("http") ? "_blank" : undefined}
         rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
@@ -195,7 +194,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </figure>
     ),
 
-    // Spread any additional components passed in
     ...components,
   };
 }

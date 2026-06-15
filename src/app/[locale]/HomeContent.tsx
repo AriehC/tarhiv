@@ -6,26 +6,14 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CategoryFilter, type Category } from "@/components/home/CategoryFilter";
 import { PostCard } from "@/components/home/PostCard";
-
-interface Post {
-  slug: string;
-  title: string;
-  description: string;
-  coverImage: string;
-  date: string;
-  category: string;
-  readingTime: number;
-}
+import type { LocalizedPost } from "@/lib/posts";
 
 interface HomeContentProps {
   locale: string;
-  allPosts: Post[];
+  allPosts: LocalizedPost[];
 }
 
-export function HomeContent({
-  locale,
-  allPosts,
-}: HomeContentProps) {
+export function HomeContent({ locale, allPosts }: HomeContentProps) {
   const [activeCategory, setActiveCategory] = useState<Category>("all");
   const t = useTranslations("home");
 
@@ -39,8 +27,9 @@ export function HomeContent({
       <Navbar />
 
       <main className="flex-1">
-        {/* All Posts with Category Filter */}
         <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <h1 className="sr-only">{t("all_posts")}</h1>
+
           <CategoryFilter
             onFilterChange={setActiveCategory}
             activeCategory={activeCategory}
@@ -54,9 +43,7 @@ export function HomeContent({
 
           {filteredPosts.length === 0 && (
             <p className="text-center text-text-muted py-12">
-              {locale === "he"
-                ? "לא נמצאו פוסטים בקטגוריה זו"
-                : "No posts found in this category"}
+              {t("no_posts_in_category")}
             </p>
           )}
         </section>

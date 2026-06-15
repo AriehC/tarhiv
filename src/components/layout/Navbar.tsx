@@ -18,8 +18,15 @@ export function Navbar() {
   const locale = useLocale();
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -41,40 +48,53 @@ export function Navbar() {
           : "h-20 bg-transparent",
       )}
     >
-      {/* Bottom gradient line */}
       {scrolled && (
-        <div className="absolute bottom-0 start-0 end-0 h-px bg-gradient-to-r from-transparent via-brand-400/50 to-transparent" />
+        <div
+          className="absolute bottom-0 start-0 end-0 h-px bg-gradient-to-r from-transparent via-brand-400/50 to-transparent"
+          aria-hidden="true"
+        />
       )}
 
       <div className="mx-auto max-w-7xl h-full px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Logo */}
-        <Link href={`/${locale}`} className="flex items-center gap-2.5 shrink-0">
-          <Image src="/icon.svg" alt="" width={32} height={32} className="rounded-lg" />
-          <span className="text-2xl font-bold font-heading gradient-text" style={{ WebkitTextStroke: "0.5px rgba(0,0,0,0.3)" }}>
+        <Link
+          href={`/${locale}`}
+          className="flex items-center gap-2.5 shrink-0 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
+          aria-label={tSite("name")}
+        >
+          <Image
+            src="/icon.svg"
+            alt=""
+            width={32}
+            height={32}
+            className="rounded-lg"
+            aria-hidden="true"
+          />
+          <span
+            className="text-2xl font-bold font-heading gradient-text"
+            style={{ WebkitTextStroke: "0.5px rgba(0,0,0,0.3)" }}
+          >
             {tSite("name")}
           </span>
         </Link>
 
-        {/* Desktop nav links */}
-        <nav className="hidden md:flex items-center gap-1">
+        <nav className="hidden md:flex items-center gap-1" aria-label={tSite("name")}>
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="relative px-4 py-2 rounded-lg text-sm font-medium text-text-secondary hover:text-brand-400 transition-all duration-300 hover:bg-brand-500/5"
+              className="relative px-4 py-2 rounded-lg text-sm font-medium text-text-secondary hover:text-brand-400 transition-all duration-300 hover:bg-brand-500/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* Controls */}
         <div className="flex items-center gap-2">
           <div className="hidden md:flex items-center gap-2">
             <LocaleSwitcher />
             <ThemeToggle />
             <Button variant="primary" size="sm">
-              <LogIn className="h-4 w-4" />
+              <LogIn className="h-4 w-4" aria-hidden="true" />
               {t("login")}
             </Button>
           </div>

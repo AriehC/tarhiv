@@ -10,11 +10,13 @@ export const frankRuhlLibre = Frank_Ruhl_Libre({
 export const heebo = Heebo({
   subsets: ["hebrew", "latin"],
   variable: "--font-heebo",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
 export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });

@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { ArrowUp, ArrowDown } from "lucide-react";
-import { cn, formatNumber } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import { AnimatedCounter } from "./AnimatedCounter";
 
 interface StatItem {

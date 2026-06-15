@@ -9,7 +9,6 @@ const CATEGORIES = [
   "all",
   "infrastructure",
   "society",
-  "history",
   "environment",
   "economy",
   "culture",
@@ -35,28 +34,33 @@ export function CategoryFilter({
   };
 
   return (
-    <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0">
+    <div
+      className="flex gap-2 overflow-x-auto pb-2 scrollbar-none -mx-4 px-4 sm:mx-0 sm:px-0"
+      role="tablist"
+      aria-label="Categories"
+    >
       {CATEGORIES.map((category) => (
         <button
           key={category}
+          role="tab"
+          aria-selected={selected === category}
           onClick={() => handleSelect(category)}
           className={cn(
             "relative shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer",
+            "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500",
             selected === category
-              ? "text-brand-400"
+              ? "text-brand-500 dark:text-brand-300"
               : "text-text-secondary hover:text-text-primary hover:bg-surface-100/50",
           )}
         >
           {selected === category && (
             <motion.div
               layoutId="category-underline"
-              className="absolute inset-0 rounded-full bg-brand-500/10 border border-brand-400/30 shadow-[0_0_15px_var(--glow-brand)]"
+              className="absolute inset-0 rounded-full bg-brand-500/10 dark:bg-brand-500/20 border border-brand-400/30 dark:border-brand-500/40 shadow-[0_0_15px_var(--glow-brand)]"
               transition={{ type: "spring", duration: 0.4, bounce: 0.15 }}
             />
           )}
-          <span className="relative z-10">
-            {tCat(category)}
-          </span>
+          <span className="relative z-10">{tCat(category)}</span>
         </button>
       ))}
     </div>

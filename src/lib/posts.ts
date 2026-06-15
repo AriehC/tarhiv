@@ -15,6 +15,22 @@ export interface Post {
 
 export const POSTS: Post[] = [
   {
+    slug: "israeli-demography-2050",
+    title: {
+      he: "דמוגרפיה ישראלית 2050: 15.9 מיליון אזרחים, חברה ללא רוב",
+      en: "Israeli Demography 2050: 15.9 Million Citizens, a Society Without a Majority",
+    },
+    description: {
+      he: "תחזית הלמ\"ס: 15.9 מיליון אזרחים, חרדים יקפצו מ-14% ל-22%, גיל החציון יעלה ל-35, ואוכלוסיית 65+ תוכפל. השאלה הדמוגרפית הגדולה של ישראל",
+      en: "CBS projections: 15.9M citizens, Haredi share jumping from 14% to 22%, median age rising to 35, and 65+ population doubling. Israel's defining demographic question",
+    },
+    coverImage: "/images/posts/israeli-demography-2050/hero.svg",
+    date: "2026-06-15",
+    category: "society",
+    readingTime: 13,
+    supportedLocales: ["he"],
+  },
+  {
     slug: "israel-78",
     title: {
       he: "78 שנה למדינה: ישראל במספרים, בסיפורים ובמסע של שמונה עשורים",

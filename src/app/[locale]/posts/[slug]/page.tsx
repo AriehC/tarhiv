@@ -103,6 +103,12 @@ const postComponents: Record<string, Record<string, React.ComponentType>> = {
       loading: MDXLoading,
     }),
   },
+  "israeli-demography-2050": {
+    he: dynamic(
+      () => import("@/../content/posts/israeli-demography-2050/index.he.mdx"),
+      { loading: MDXLoading },
+    ),
+  },
 };
 
 export function generateStaticParams() {
